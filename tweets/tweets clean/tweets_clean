@@ -1,0 +1,27 @@
+
+rt<-read.csv("d:/Chengjun/tweets data/tweets data/retweets.csv", header=T,  dec=",")
+head(rt)
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~diffusion range~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+rtp<-data.frame(table(rt$retweetedFromPostId))
+names(rtp)
+rtpo<-rtp[with(rtp, order(Freq)), ] # this function is powerful.
+tail(rtpo) # the biggest diffusion is 77 times.
+table(rtpo$Freq)
+data.frame(table(rt$retweetCount)) 
+# 101 29798,the most popular news was diffused by less than 101 people.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~individual popularity~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+rtu<-data.frame(table(rt$retweetedFromUsername))
+rtuo<-rtu[with(rtu, order(Freq)), ] 
+tail(rtuo)
+# this account "breaknews" is diffused 14177 times, which is the most popular one.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~favorite disclosure~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+rtf<-data.frame(table(rt$favorite))
+rtfo<-rtf[with(rtf, order(Freq)), ] 
+tail(rtfo)
+# only five people disclose their favorite.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~creationTime~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+tail(rt$creationTime)
+head(rt$creationTime)
+# since 2010-11-12 to 2010-12-22, about 40 days.
+# how to justify the diffusion content is necessary for my further analysis.
+
