@@ -1,0 +1,182 @@
+# @ Chegnjun WANG
+# @ 20110701
+# Thanks to Lingfei wu for his work on the function  of newsthresholds
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~read csv of votes~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+ digg <- read.csv(file= "d:/chengjun/digg/digg_votes1.csv", head=FALSE,na.string='NA') 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~read csv of friendship~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+  net <- read.csv(file= "d:/chengjun/digg/digg_net.csv", head=T) 
+  net <- net[,3:4]
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~funcion of newsthresholds~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+newsthresholds<-function(newsindex){
+                 
+	#~~~~~~~~~~~~~~~~~~~~~~~~~~~get voters~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+	voters<-subset(digg,digg[,3]==newsindex) #get the voters for story n
+
+	#~~~~~~~~~~~~~~~~~~~~~~get the thresold of a voter ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+	voterthresold=function(id){
+		friends=subset(net[,2], net[,1] == id) #for each voter, find his friends
+		adoptedFriends=intersect(friends,voters[,2])
+		timeofAdoptinfriend=subset(voters[,1],voters[,2] %in% adoptedFriends)
+		NofEarlierAdoptFriends=length(subset(timeofAdoptinfriend,timeofAdoptinfriend<voters[1,1])) 	
+		rate=NofEarlierAdoptFriends/length(friends)
+	return(rate)
+	}
+	voterthresolds=sapply(voters[,2],voterthresold)
+	l=length(voters[,2])
+	data<-cbind(rep(newsindex,l),voters[,2],voterthresolds)
+
+return (data)
+
+}
+
+ t1<-sapply(c(1:3553),newsthresholds)   # there are 3553 news stories.
+#~~~~~~~~~~~~~~~~something is wrong with data frame~~~~~~~~~~~~~~~~#
+ t1[[1]],t1[[3552]]
+ 
+ write.csv(t1[[2]], file="D:/Chengjun/digg/2.csv")
+
+ proc.time()
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# @Chegnjun WANG
+# @20110701
+ 
+# Start>Run>type "cmd" 
+# Then make sure all your csv files are in the same folder.
+# change the folder by using: cd D://
+# Type copy *.csv threshold3553.csv
+# This will copy all csv files an combine them in a file called threshold3553.csv. 
+#~~~~~~~~~~~~~~~~~~~~~~~~~load data~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+threshold3553 <- read.csv(file= "d:/Chengjun/digg/Thresholds of 3553 News/threshold3553.csv",
+     head=T, na.string='NA') 
+t<-threshold3553
+# replace <NA> as 0
+t$voterthresolds[ is.na(t$voterthresolds) ] <- 0 # threshold3553[1:10,]#  t[1:10,]
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~zerothreshold~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+zerothreshold<-function(newsindex){
+             m<-subset(t,t[,2]==newsindex)
+             zero<-length(subset(m[,4],m[,4]==0))
+             all<-length(m[,4])
+             ratio<-zero/all             
+             return(ratio)
+           }
+require(plyr)
+zero<-laply(1:5, zerothreshold, .progress = 'text')  
+
+zero_ratio<-sapply(c(1:3553),zerothreshold)
+
+# write.csv(zero_ratio, file = "d:/Chengjun/digg/Thresholds of 3553 News/zero_threshold_ratio.csv")
+threshold3553 <- read.csv(file= "d:/Chengjun/digg/Thresholds of 3553 News/threshold3553.csv",
+     head=T, na.string='NA') 
+# require(plyr)
+# laply(baseball, is.factor,.progress='text')
+#~~~~~~~~~~~~~~~~~~~~~~~mean_threshold~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+mean_threshold<-function(newsindex){
+             m<-subset(t,t[,2]==newsindex)
+             mean<-mean(as.numeric(levels(m$voterthresolds)[m$voterthresolds]))
+             return(mean)
+           }
+mean_threshold<-laply(c(1:3553),mean_threshold, .progress='text')
+# write.csv(mean_threshold, file = "d:/Chengjun/digg/Thresholds of 3553 News/mean_threshold.csv")
+zeroandmean<-cbind(zero_ratio, mean_threshold)
+
+plot(zeroandmean)
+cor(zeroandmean[,1],zeroandmean[,2])
+reg<-lm(zeroandmean[,1]~zeroandmean[,2])
+summary(reg)
+# write.csv(zeroandmean, file = "d:/Chengjun/digg/Thresholds of 3553 News/zeroandmean.csv")
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~merge threshold into frontpage~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+zeroandmean <- read.csv(file= "d:/Chengjun/digg/Thresholds of 3553 News/zeroandmean.csv",
+     head=T, na.string='NA') 
+zeroandmean$storyid<-zeroandmean$X  # generate storyid for merge
+frontpage <- read.csv(file= "d:/Chengjun/digg/Thresholds of 3553 News/frontpage_info.csv",
+     head=T, na.string='NA') 
+front<-merge(frontpage, zeroandmean, by="storyid")
+# write.csv(front, file = "d:/Chengjun/digg/Thresholds of 3553 News/front_zero_mean.csv")
+fronthreshold <- read.csv(file= "d:/Chengjun/digg/Thresholds of 3553 News/front_zero_mean.csv",
+     head=T, na.string='NA') 
+fronthreshold[1:3,]
+ft<-fronthreshold
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~frontpage analysis~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+plot(ft$mean_threshold, ft$diggs)
+mft<-lm(log(ft$mean_threshold)~log(ft$diggs))
+summary(mft)
+
+ft$logmt<-log(ft$mean_threshold)
+ft$logfd<-log(ft$diggs)
+mft1<-lm(ft$logmt~ft$logfd)
+
+abline(mft1<-lm(ft$logmt~ft$logfd))
+
+summary(mft1)
+
+plot(ft$logfd, ft$logmt, xlab="Log(Diggs)", ylab="Log(Mean of Threshold)")
+abline(mft1, lwd=4,col="skyblue")
+
+cor(log(ft$mean_threshold),log(ft$diggs))
+
+abline(mft1, col = "skyblue",lwd=8)
+abline(coef = coef(mft))
+plot(log(ft$mean_threshold),log(ft$diggs), 
+   xlab='Log(The ratio of zero-threshold)'),
+   ylab
+lines(log(ft$mean_threshold), predict(mft))
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~zero threshold ratio~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+plot(ft$zero_ratio, ft$diggs)
+plot(ft$diggs, ft$zero_ratio)
+plot(log(ft$zero_ratio), log(ft$diggs))
+plot(log(ft$zero_ratio),log(ft$diggs))
+# plot(log(log(ft$zero_ratio)+1), log(log(ft$diggs)+1))
+#~~~~~~~~~~~~~~~~~~~~~~~full model~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+f1<-lm(diggs~+log(mean_threshold),data=ft)
+summary(f1)
+
+f2<-lm(diggs~+log(zero_ratio),data=ft)
+summary(f2)
+
+logzero<-log(zero_ratio)
+logzero2<-logzero^2
+# mean_threshold has negative influence on final_diggs
+full<-lm(final_diggs~view_count+log(mean_threshold),data=ft)
+summary(full)
+# zero_ratio has a nonlinear relationship with final_diggs
+full<-lm(final_diggs~view_count+logzero+logzero2,data=ft)
+summary(full)
+# however, if we control the influence of zero_ratio, mean_threshold also as a positive influence.
+full<-lm(final_diggs~view_count+submitter_fans1+(container_name)
+      +logzero+logzero2+log(mean_threshold),data=ft)
+summary(full)
+
+full<-lm(final_diggs~view_count+submitter_fans1+factor(container_name)
+      +logzero+logzero2+log(mean_threshold),data=ft)
+summary(full)
+
+ft$submitter_fans1<-as.numeric(levels(ft$submitter_fans)[ft$submitter_fans])
+# add news category
+class(ft$container_name)  # is.factor(ft$container_name)
+ft$container_name[1:15]
+# add promtotion time
+ft$time<-ft$promote_date-ft$submit_date
+full<-lm(final_diggs~view_count+submitter_fans1+factor(container_name)+time
+      +logzero+logzero2+log(mean_threshold),data=ft)
+summary(full)
+
+#~~~~~~~~~Appendix of combine multiple csv using R~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+filenames <- Sys.glob("*.csv")  # however you get the list of file
+allData <- lapply(filenames, function(.file){
+
+   dat<-read.csv(.file, header=F)
+   dat<-dat[c(-1:-3),c(-1,-4,-5,-6,-7,-9,-10,-11,-12)]
+   names(dat)<-c('time','T1','T2')
+   dat <- dat[,1:3]
+
+   dat$id<-as.character(.file)
+
+   dat    # return the dataframe
+   })
+# combine into a single dataframe
+myDF <- do.call(rbind, allData)
+
+# @chengjun
