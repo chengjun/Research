@@ -1,0 +1,295 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      8695,        286]
+NotebookOptionsPosition[      7574,        241]
+NotebookOutlinePosition[      7980,        258]
+CellTagsIndexPosition[      7937,        255]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ "D[f, x] gives the partial derivative.\n",
+ StyleBox["For Yaobin Liu\nChengjun @  Canberra, 20120402", "Subtitle"]
+}], "Title",
+ CellChangeTimes->{{3.542352318700992*^9, 3.542352326562442*^9}, {
+   3.542352457397925*^9, 3.5423526232604117`*^9}, {3.5423526599735117`*^9, 
+   3.5423526681009765`*^9}, {3.5423527527678194`*^9, 
+   3.5423529907414303`*^9}, {3.54235302359931*^9, 3.5423530525679665`*^9}, 
+   3.5423531293153563`*^9, 3.5423534591282206`*^9, 3.542353845869341*^9, {
+   3.5423539398247147`*^9, 3.542353984806288*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"x", "^", "n"}], ",", " ", "x"}], "]"}], " "}]], "Input",
+ CellChangeTimes->{{3.542353314580953*^9, 3.5423533291597867`*^9}, {
+  3.542353898355343*^9, 3.5423539153053126`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"n", " ", 
+  SuperscriptBox["x", 
+   RowBox[{
+    RowBox[{"-", "1"}], "+", "n"}]]}]], "Output",
+ CellChangeTimes->{3.542353916197364*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f1", "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["C", 
+      RowBox[{"1", "-", "\[CurlyEpsilon]", " "}]], "-", "1"}], 
+    RowBox[{"1", "-", "\[CurlyEpsilon]"}]], "+", 
+   RowBox[{
+    SubscriptBox["\[Theta]", "1"], "*", "A", "*", 
+    SuperscriptBox["K", "\[Alpha]"], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"u", "*", "H"}], ")"}], "\[Beta]"], 
+    SuperscriptBox["R", "\[CapitalUpsilon]"]}], "-", 
+   RowBox[{
+    SubscriptBox["\[Theta]", "1"], "*", "C"}], "-", 
+   RowBox[{
+    SubscriptBox["\[Theta]", "1"], "*", 
+    SubscriptBox["\[Delta]", "k"], "*", "K"}], "+", 
+   RowBox[{
+    SubscriptBox["\[Theta]", "2"], "*", "\[Eta]", "*", "S"}], "-", 
+   RowBox[{
+    SubscriptBox["\[Theta]", "2"], "*", "R"}], "+", 
+   RowBox[{
+    SubscriptBox["\[Theta]", "3"], "*", "B", "*", "H", "*", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", "u"}], ")"}]}], "-", 
+   RowBox[{
+    SubscriptBox["\[Theta]", "3"], "*", 
+    SubscriptBox["\[Delta]", "h"], "*", "H"}]}]}]], "Input",
+ CellChangeTimes->{{3.5423534638454905`*^9, 3.542353465551588*^9}, 
+   3.54235350370477*^9, 3.542353698351904*^9, {3.5424082336591864`*^9, 
+   3.5424082381844454`*^9}, {3.542408303744195*^9, 3.5424083269275208`*^9}, {
+   3.542408385890894*^9, 3.5424084085371885`*^9}, {3.542408454975845*^9, 
+   3.5424084602421465`*^9}, {3.542408820543754*^9, 3.542408898259199*^9}, {
+   3.5424091900658894`*^9, 3.5424092422548747`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{
+    RowBox[{"-", "1"}], "+", 
+    SuperscriptBox["C", 
+     RowBox[{"1", "-", "\[CurlyEpsilon]"}]]}], 
+   RowBox[{"1", "-", "\[CurlyEpsilon]"}]], "-", 
+  RowBox[{"C", " ", 
+   SubscriptBox["\[Theta]", "1"]}], "+", 
+  RowBox[{"A", " ", 
+   SuperscriptBox["K", "\[Alpha]"], " ", 
+   SuperscriptBox["R", "\[CapitalUpsilon]"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"H", " ", "u"}], ")"}], "\[Beta]"], " ", 
+   SubscriptBox["\[Theta]", "1"]}], "-", 
+  RowBox[{"K", " ", 
+   SubscriptBox["\[Delta]", "k"], " ", 
+   SubscriptBox["\[Theta]", "1"]}], "-", 
+  RowBox[{"R", " ", 
+   SubscriptBox["\[Theta]", "2"]}], "+", 
+  RowBox[{"S", " ", "\[Eta]", " ", 
+   SubscriptBox["\[Theta]", "2"]}], "+", 
+  RowBox[{"B", " ", "H", " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "-", "u"}], ")"}], " ", 
+   SubscriptBox["\[Theta]", "3"]}], "-", 
+  RowBox[{"H", " ", 
+   SubscriptBox["\[Delta]", "h"], " ", 
+   SubscriptBox["\[Theta]", "3"]}]}]], "Output",
+ CellChangeTimes->{3.5424088230949*^9, 3.5424088546367044`*^9, 
+  3.542408898864234*^9, 3.542409165384478*^9, 3.542409243970973*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{"f1", ",", " ", "C"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5423534840616465`*^9, 3.542353514590393*^9}, 
+   3.5423537004290223`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["C", 
+   RowBox[{"-", "\[CurlyEpsilon]"}]], "-", 
+  SubscriptBox["\[Theta]", "1"]}]], "Output",
+ CellChangeTimes->{3.542353515741459*^9, 3.542353922823743*^9, 
+  3.5424084632413177`*^9, 3.5424088250960145`*^9, 3.542408901220369*^9, 
+  3.542409246208101*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{"f1", ",", " ", "K"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5423535736167693`*^9, 3.542353575565881*^9}, 
+   3.5423537023701334`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"A", " ", 
+   SuperscriptBox["K", 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", "\[Alpha]"}]], " ", 
+   SuperscriptBox["R", "\[CapitalUpsilon]"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"H", " ", "u"}], ")"}], "\[Beta]"], " ", "\[Alpha]", " ", 
+   SubscriptBox["\[Theta]", "1"]}], "-", 
+  RowBox[{
+   SubscriptBox["\[Delta]", "k"], " ", 
+   SubscriptBox["\[Theta]", "1"]}]}]], "Output",
+ CellChangeTimes->{
+  3.542353580205146*^9, 3.54235392575091*^9, 3.54240846520343*^9, 
+   3.5424089088268037`*^9, {3.5424091624683113`*^9, 3.5424091681356354`*^9}, 
+   3.5424092478441944`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{"f1", ",", " ", "S"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5423535832333193`*^9, 3.542353588808638*^9}, 
+   3.5423537040632305`*^9}],
+
+Cell[BoxData[
+ RowBox[{"\[Eta]", " ", 
+  SubscriptBox["\[Theta]", "2"]}]], "Output",
+ CellChangeTimes->{3.542353589995706*^9, 3.542353927587015*^9, 
+  3.5424084669035273`*^9, 3.5424089108429193`*^9, 3.542409249606295*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{"f1", ",", " ", "H"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5423535965010777`*^9, 3.5423535979281597`*^9}, 
+   3.5423537056133184`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"A", " ", 
+   SuperscriptBox["K", "\[Alpha]"], " ", 
+   SuperscriptBox["R", "\[CapitalUpsilon]"], " ", "u", " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"H", " ", "u"}], ")"}], 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", "\[Beta]"}]], " ", "\[Beta]", " ", 
+   SubscriptBox["\[Theta]", "1"]}], "+", 
+  RowBox[{"B", " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "-", "u"}], ")"}], " ", 
+   SubscriptBox["\[Theta]", "3"]}], "-", 
+  RowBox[{
+   SubscriptBox["\[Delta]", "h"], " ", 
+   SubscriptBox["\[Theta]", "3"]}]}]], "Output",
+ CellChangeTimes->{3.542353599697261*^9, 3.542353930580186*^9, 
+  3.542408468778634*^9, 3.542408912342005*^9, 3.5424092515274053`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{"f1", ",", " ", "u"}], " ", "]"}]], "Input",
+ CellChangeTimes->{{3.5424094078193445`*^9, 3.542409411482554*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"A", " ", "H", " ", 
+   SuperscriptBox["K", "\[Alpha]"], " ", 
+   SuperscriptBox["R", "\[CapitalUpsilon]"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"H", " ", "u"}], ")"}], 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", "\[Beta]"}]], " ", "\[Beta]", " ", 
+   SubscriptBox["\[Theta]", "1"]}], "-", 
+  RowBox[{"B", " ", "H", " ", 
+   SubscriptBox["\[Theta]", "3"]}]}]], "Output",
+ CellChangeTimes->{3.542409413219653*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1264, 665},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+PrintingCopies->1,
+PrintingPageRange->{Automatic, Automatic},
+FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 543, 9, 163, "Title"],
+Cell[CellGroupData[{
+Cell[1135, 35, 245, 6, 31, "Input"],
+Cell[1383, 43, 160, 5, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1580, 53, 1446, 36, 50, "Input"],
+Cell[3029, 91, 1132, 32, 50, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4198, 128, 179, 4, 31, "Input"],
+Cell[4380, 134, 298, 7, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4715, 146, 179, 4, 31, "Input"],
+Cell[4897, 152, 627, 17, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5561, 174, 179, 4, 31, "Input"],
+Cell[5743, 180, 221, 4, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6001, 189, 181, 4, 31, "Input"],
+Cell[6185, 195, 700, 19, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6922, 219, 156, 3, 31, "Input"],
+Cell[7081, 224, 465, 13, 30, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

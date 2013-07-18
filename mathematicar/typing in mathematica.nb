@@ -1,0 +1,242 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      7243,        233]
+NotebookOptionsPosition[      6415,        204]
+NotebookOutlinePosition[      6758,        219]
+CellTagsIndexPosition[      6715,        216]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Typing expressions", "Subsubsection",
+ CellChangeTimes->{{3.5527255756109548`*^9, 3.5527255798691983`*^9}, {
+   3.552725668901291*^9, 3.5527256742675977`*^9}, 3.5527281565946517`*^9, {
+   3.5527281969939623`*^9, 3.5527282165620813`*^9}, 3.552728256825384*^9, {
+   3.5527286877100296`*^9, 3.55272869103722*^9}, {3.552733751752965*^9, 
+   3.552733761306511*^9}}],
+
+Cell[BoxData[
+ RowBox[{"TypingFractions", " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "learn", " ", "about", " ", "the", " ", "typing", " ", "in", " ", "MM"}], 
+   "*)"}], ";"}]], "Input",
+ CellChangeTimes->{{3.5527288109390783`*^9, 3.5527288531074896`*^9}, {
+  3.55273061322092*^9, 3.5527306648938756`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["x", "y"], " ", ";", 
+  RowBox[{"(*", " ", 
+   RowBox[{"ctr", " ", "+", " ", "/"}], "*)"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"ctr", " ", "+", " ", 
+    RowBox[{
+    "space", " ", "to", " ", "move", " ", "to", " ", "another", " ", 
+     "section"}]}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.5527304873357196`*^9, 3.5527305131771975`*^9}, 
+   3.5527306102677507`*^9, {3.552730648324928*^9, 3.5527306605416265`*^9}, {
+   3.5527308599720335`*^9, 3.552730880208191*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["x", 
+   FractionBox["m", "n"]], 
+  RowBox[{"(*", 
+   RowBox[{"ctr", " ", "+", " ", "^"}], " ", "*)"}]}]], "Input",
+ CellChangeTimes->{{3.5527312379866543`*^9, 3.552731304727472*^9}, {
+  3.552731402340055*^9, 3.5527314212531366`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SqrtBox["x"], " ", 
+  RowBox[{"(*", 
+   RowBox[{"ctr", " ", "+", " ", "2"}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.5527309100949*^9, 3.552730914278139*^9}, {
+  3.552731036906153*^9, 3.552731051619995*^9}, {3.55273112933244*^9, 
+  3.552731203220666*^9}, {3.5527314598683453`*^9, 3.552731477048328*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RadicalBox["x", "3"], " ", 
+  RowBox[{"(*", 
+   RowBox[{"ctr", " ", "+", " ", "5"}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.552731524411037*^9, 3.552731566565448*^9}, {
+  3.5527316145111904`*^9, 3.552731633194259*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", GridBox[{
+     {"a", "b", "c"}
+    }], ")"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"(", ")"}], ",", " ", 
+    RowBox[{"and", " ", "a"}], ",", " ", 
+    RowBox[{
+     RowBox[{"and", " ", "ctr"}], " ", "+"}], " ", ","}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.552731536992757*^9, 3.552731540354949*^9}, {
+  3.5527317411124315`*^9, 3.5527317860210004`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", GridBox[{
+     {"a"},
+     {"b"},
+     {"c"},
+     {"d"}
+    }], ")"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"\:ff08", "\:ff09"}], "\:ff0c", " ", "ctr"}], " ", "+", " ", 
+     "enter"}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.552731790718269*^9, 3.5527318812414465`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"\[Placeholder]", "\[Placeholder]", "\[Placeholder]"},
+     {"\[Placeholder]", "\[Placeholder]", "\[Placeholder]"},
+     {"\[Placeholder]", "\[Placeholder]", "\[Placeholder]"}
+    }], "\[NoBreak]", ")"}], "  ", 
+  RowBox[{"(*", 
+   FormBox[
+    StyleBox[
+     ButtonBox[
+      RowBox[{"insert", " ", "+", " ", 
+       RowBox[{"table", "/", "matirx"}], " ", "+", " ", "new"}],
+      BaseStyle->{"Link", "MenuName"},
+      ButtonData->"paclet:guide/InsertMenu"], "MenuName"],
+    TextForm], "*)"}], ";"}]], "Input",
+ CellChangeTimes->{{3.5527320383294315`*^9, 3.552732124361352*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["x", 
+   RowBox[{"y", "\[CenterDot]", "m"}]], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Type", " ", "y"}], ",", 
+    RowBox[{"press", " ", 
+     StyleBox["Esc", "KeyEvent"]}], ",", 
+    RowBox[{"type", " ", "a", " ", "comma"}], ",", 
+    StyleBox[
+     RowBox[{"press", 
+      StyleBox["Esc", "KeyEvent"]}]], ",", 
+    RowBox[{"and", " ", "type", " ", 
+     RowBox[{"m", "."}]}]}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.552732207940133*^9, 3.5527323102299833`*^9}, {
+  3.552732525655305*^9, 3.5527325273954043`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["x", 
+   SubscriptBox["m", "n"]], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Type", " ", "m"}], ",", " ", 
+    RowBox[{"ctr", "+", "-"}], ",", 
+    RowBox[{"and", " ", "type", " ", 
+     RowBox[{"m", "."}]}]}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.552732437126241*^9, 3.5527324453927145`*^9}, {
+  3.552732493345457*^9, 3.5527325486196184`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  OverscriptBox["x", "-"], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"ctr", " ", "+"}], " ", "&"}], ",", " ", 
+    RowBox[{
+     RowBox[{"and", " ", "press"}], " ", "-"}]}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.552732599787545*^9, 3.552732644536104*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  UnderscriptBox["x", "-"], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"ctr", " ", "+", " ", "="}], " ", "*)"}]}]], "Input",
+ CellChangeTimes->{{3.5527326896386843`*^9, 3.5527327284979067`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  UnderscriptBox["lim", 
+   RowBox[{"x", "\[Rule]", "a"}]], 
+  RowBox[{"f", "[", "x", "]"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"TType", " ", "lim"}], ",", 
+    RowBox[{
+     RowBox[{"and", " ", "press", " ", 
+      StyleBox["Ctrl", "KeyEvent"]}], 
+     StyleBox["+=", "KeyEventDelimiter"]}], 
+    StyleBox[",", "KeyEventDelimiter"], 
+    StyleBox[" ", "KeyEventDelimiter"], 
+    StyleBox[
+     RowBox[{"Press", 
+      StyleBox["Esc", "KeyEvent"]}]], ",", 
+    RowBox[{"type", "->"}], ",", 
+    RowBox[{"and", " ", 
+     RowBox[{
+      StyleBox[
+       RowBox[{"press", 
+        StyleBox["Esc", "KeyEvent"]}]], "."}]}]}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.5527327822689824`*^9, 3.5527328595144005`*^9}}]
+}, Open  ]],
+
+Cell["KeyboardShortcutListing", "Subsection",
+ CellChangeTimes->{{3.552820416207837*^9, 3.5528204224741955`*^9}}]
+},
+WindowSize->{607, 537},
+WindowMargins->{{Automatic, 3}, {Automatic, 1}},
+FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 366, 5, 27, "Subsubsection"],
+Cell[936, 29, 302, 7, 31, "Input"],
+Cell[1241, 38, 512, 12, 47, "Input"],
+Cell[1756, 52, 275, 7, 37, "Input"],
+Cell[2034, 61, 331, 7, 35, "Input"],
+Cell[2368, 70, 247, 6, 36, "Input"],
+Cell[2618, 78, 411, 12, 31, "Input"],
+Cell[3032, 92, 353, 14, 72, "Input"],
+Cell[3388, 108, 650, 16, 57, "Input"],
+Cell[4041, 126, 567, 16, 31, "Input"],
+Cell[4611, 144, 395, 11, 31, "Input"],
+Cell[5009, 157, 307, 9, 31, "Input"],
+Cell[5319, 168, 214, 5, 37, "Input"],
+Cell[5536, 175, 747, 23, 60, "Input"]
+}, Open  ]],
+Cell[6298, 201, 113, 1, 36, "Subsection"]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,334 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      9365,        325]
+NotebookOptionsPosition[      7763,        262]
+NotebookOutlinePosition[      8106,        277]
+CellTagsIndexPosition[      8063,        274]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["page 9", "Subsection",
+ CellChangeTimes->{{3.552819997450886*^9, 3.552819998462944*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Limit ", "Subsubsection",
+ CellChangeTimes->{{3.552820150804657*^9, 3.552820151619704*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"Sin", "[", "t", "]"}], "t"], ",", " ", 
+   RowBox[{"t", "\[Rule]", " ", "0"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.552819904822588*^9, 3.552819946190954*^9}, 
+   3.5528207914432993`*^9}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{3.552819947850049*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+The expansion of a function f (t) in a Taylor series around t =\:f39f0 up to \
+third
+order\
+\>", "Subsubsection",
+ CellChangeTimes->{3.552820101446834*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", "0", ",", " ", "3"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5528200158889403`*^9, 3.5528200638836856`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"f", "[", "0", "]"}], "+", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["f", "\[Prime]",
+      MultilineFunction->None], "[", "0", "]"}], " ", "t"}], "+", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{
+     SuperscriptBox["f", "\[Prime]\[Prime]",
+      MultilineFunction->None], "[", "0", "]"}], " ", 
+    SuperscriptBox["t", "2"]}], "+", 
+   RowBox[{
+    FractionBox["1", "6"], " ", 
+    RowBox[{
+     SuperscriptBox["f", 
+      TagBox[
+       RowBox[{"(", "3", ")"}],
+       Derivative],
+      MultilineFunction->None], "[", "0", "]"}], " ", 
+    SuperscriptBox["t", "3"]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "t", "]"}], "4"],
+    SeriesData[$CellContext`t, 0, {}, 0, 4, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`t, 0, {
+    $CellContext`f[0], 
+    Derivative[1][$CellContext`f][0], Rational[1, 2] 
+    Derivative[2][$CellContext`f][0], Rational[1, 6] 
+    Derivative[3][$CellContext`f][0]}, 0, 4, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{3.5528200656347857`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["The calculation of a finite sum", "Subsubsection",
+ CellChangeTimes->{3.5528205725817814`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  UnderoverscriptBox["\[Sum]", 
+   RowBox[{"n", "=", "1"}], "10"], 
+  SuperscriptBox[
+   RowBox[{"(", 
+    FractionBox["1", "2"], ")"}], "n"]}]], "Input",
+ CellChangeTimes->{{3.5528204786634097`*^9, 3.5528205409669733`*^9}}],
+
+Cell[BoxData[
+ FractionBox["1023", "1024"]], "Output",
+ CellChangeTimes->{3.552820546630297*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["The Laplace transform of the function", "Subsubsection",
+ CellChangeTimes->{3.552820783788862*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"LaplaceTransform", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", "t", "]"}], ",", "t", ",", "s"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ FractionBox["1", 
+  RowBox[{"1", "+", 
+   SuperscriptBox["s", "2"]}]]], "Output",
+ CellChangeTimes->{3.5528207277846584`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Solveing partial differential equations", "Subsubsection",
+ CellChangeTimes->{{3.552820846122427*^9, 3.552820864795495*^9}, {
+  3.5528210711872997`*^9, 3.5528210720813513`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      SubscriptBox["\[PartialD]", "t"], " ", 
+      RowBox[{"u", "[", "t", "]"}]}], "+", " ", 
+     RowBox[{"\[Alpha]", " ", 
+      RowBox[{"u", "[", "t", "]"}]}]}], "\[Equal]", "0"}], ",", " ", "u", ",",
+    " ", "t"}], "]"}]], "Input",
+ CellChangeTimes->{{3.552820870068797*^9, 3.552820875173089*^9}, {
+  3.5528209518394737`*^9, 3.5528209872725005`*^9}, {3.5528210359972873`*^9, 
+  3.552821078934743*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"u", "\[Rule]", 
+    RowBox[{"Function", "[", 
+     RowBox[{
+      RowBox[{"{", "t", "}"}], ",", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{
+         RowBox[{"-", "t"}], " ", "\[Alpha]"}]], " ", 
+       RowBox[{"C", "[", "1", "]"}]}]}], "]"}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.5528210911424417`*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Keyboard Shortcut Listing", "Subsection",
+ CellChangeTimes->{3.55282135683925*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"<<", "Calculus`VectorAnalysis`"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"newpkg\"\>"}], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(\\*StyleBox[\\!\\(\\\"Calculus`VectorAnalysis`\\\"\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" is now available as \
+the \\\\\\\"\\\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(\\\"Vector \
+Analysis Package\\\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\
+\". See the Compatibility Guide for updating information.\\\\\\\"\\\", \\\"MT\
+\\\"]\\) \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\
+\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:Compatibility/Tutorials/Calculus/VectorAnalysis\\\", \
+ButtonNote -> \\\"General::newpkg\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5528215044789095`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CrossProduct", "::", "\<\"shdw\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Symbol \\\\\\\"\\\", \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(\\\"CrossProduct\\\"\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" appears in multiple \
+contexts \\\\\\\"\\\", \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\({\\\"Calculus`VectorAnalysis`\
+\\\", \\\"Global`\\\"}\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\
+\\\"; definitions in context \\\\\\\"\\\", \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(\\\"Calculus`VectorAnalysis`\\\
+\"\\), \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\" may shadow or \
+be shadowed by other definitions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/shdw\\\", \
+ButtonNote -> \\\"Calculus`VectorAnalysis`CrossProduct::shdw\\\"]\\)\"\>"}]], \
+"Message", "MSG",
+ CellChangeTimes->{3.55282150457251*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.5528216730694056`*^9, 3.552821673755807*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CrossProduct", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"d", ",", "e", ",", "f"}], "}"}]}], "]"}], " ", "//", " ", 
+  "MatrixForm"}]], "Input",
+ CellChangeTimes->{{3.5528214817184696`*^9, 3.552821488910082*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"CrossProduct", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"d", ",", "e", ",", "f"}], "}"}]}], "]"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.5528214908600855`*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{599, 665},
+WindowMargins->{{1, Automatic}, {Automatic, 1}},
+FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 94, 1, 36, "Subsection"],
+Cell[CellGroupData[{
+Cell[686, 27, 97, 1, 27, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[808, 32, 269, 7, 47, "Input"],
+Cell[1080, 41, 70, 1, 30, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1199, 48, 165, 5, 43, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[1389, 57, 255, 6, 31, "Input"],
+Cell[1647, 65, 1096, 34, 47, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2792, 105, 100, 1, 27, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[2917, 110, 248, 7, 55, "Input"],
+Cell[3168, 119, 96, 2, 47, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3313, 127, 104, 1, 27, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[3442, 132, 133, 3, 31, "Input"],
+Cell[3578, 137, 140, 4, 47, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3767, 147, 183, 2, 27, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[3975, 153, 496, 13, 31, "Input"],
+Cell[4474, 168, 401, 12, 33, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4936, 187, 88, 1, 36, "Subsection"],
+Cell[CellGroupData[{
+Cell[5049, 192, 68, 1, 31, "Input"],
+Cell[5120, 195, 785, 14, 56, "Message"],
+Cell[5908, 211, 1046, 18, 73, "Message"]
+}, Open  ]],
+Cell[6969, 232, 94, 1, 31, "Input"],
+Cell[CellGroupData[{
+Cell[7088, 237, 325, 9, 31, "Input"],
+Cell[7416, 248, 319, 10, 44, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

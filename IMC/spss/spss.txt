@@ -1,0 +1,222 @@
+***Match coding results (population) of ZZ and ZL. 
+get file  '/Users/apple/Desktop/final cleaned by lun_batch3.sav'.
+sort cases by  filename ID journal Bottle_ZL_1 Wine_ZL_1 Wine_ZZ_1 Method_ZZ_1 Bottle_ZL_2 Bottle_ZL_3 Wine_ZL_3 Wine_ZL_2
+Notes_ZZ relevant NotesTitle coderisi pn qualification downloaded year Volume Issue Pages p1 p2 sample justification coded.paper jabb tag.
+del var tag.
+save out   '/Users/apple/Desktop/final cleaned by lun_batch3.sav'.
+GET  FILE='/Users/apple/Downloads/final_cleaned_by_zz_batch1.sav'.
+sort cases by filename ID journal Bottle_ZL_1Wine_ZL_1 Wine_ZZ_1 Method_ZZ_1 Notes_ZZ relevant Notes Title coder isi pn qualification downloaded year Volume Issue
+Pages p1 p2 sample justification coded.paper jabb.
+SAVE OUTFILE='//Users/apple/Downloads/final_cleaned_by_zz_batch1.sav'
+  /DROP=ID journal relevant Notes Title coder isi pn 
+    qualification downloaded year Volume Issue Pages p1 p2 sample justification coded.paper jabb
+  /COMPRESSED.
+get file   '/Users/apple/Downloads/final_cleaned_by_zz_batch2.sav'.
+sort cases by filename.
+SAVE OUTFILE='/Users/apple/Downloads/final_cleaned_by_zz_batch2.sav'
+  /DROP=ID journal Bottle_ZL_1 Bottle_ZL_2 Wine_ZL_2 relevant Notes Title coder isi pn 
+    qualification downloaded year Volume Issue Pages p1 p2 sample justification coded.paper jabb
+  /COMPRESSED.
+
+get file '/Users/apple/Desktop/final cleaned by lun_batch3.sav'.
+match files file  '/Users/apple/Downloads/final_cleaned_by_zz_batch2.sav' /file  '/Users/apple/Downloads/final_cleaned_by_zz_batch1.sav' /file '/Users/apple/Desktop/final cleaned by lun_batch3.sav'/by filename/map.
+EXECUTE.
+freq Bottle_ZL_1 Bottle_ZL_2 Bottle_ZL_3.
+sort cases by filename.
+save out  '/Users/apple/Desktop/final cleaned by lun_batch3.sav'.
+get file '/Users/apple/Desktop/final cleaned by lun_batch4.sav'.
+sort cases by filename.
+save out '/Users/apple/Desktop/final cleaned by lun_batch4.sav'.
+get file '/Users/apple/Downloads/final_cleaned_by_zz_batch4.sav'.
+sort cases by filename.
+get file '/Users/apple/Downloads/final_cleaned_by_zz_batch3.sav'.
+sort cases by filename.
+match files file '/Users/apple/Desktop/final cleaned by lun_batch4.sav'/file '/Users/apple/Downloads/final_cleaned_by_zz_batch4.sav'/file '/Users/apple/Downloads/final_cleaned_by_zz_batch3.sav'/by filename/map.
+exe. 
+if (Bottle_ZL_1 NE Bottle_ZL_2) or (Bottle_ZL_1 NE Bottle_ZL_3) or (Bottle_ZL_1 NE Bottle_ZL_4) or (Bottle_ZL_2 NE Bottle_ZL_3) or (Bottle_ZL_2 NE Bottle_ZL_4) or (Bottle_ZL_3 NE Bottle_ZL_4) tag=1.
+freq tag. 
+if (Wine_ZL_1 NE Wine_ZL_2) or (Wine_ZL_1 NE Wine_ZL_3) or (Wine_ZL_1 NE Wine_ZL_4) or (Wine_ZL_1 NE Wine_ZZ_1) or (Wine_ZL_1 NE Wine_ZZ_2) or (Wine_ZL_1 NE Wine_ZZ_3) or (Wine_ZL_1 NE Wine_ZZ_4) 
+or (Wine_ZL_2 NE Wine_ZL_3) or (Wine_ZL_2 NE Wine_ZL_4) or (Wine_ZL_2 NE Wine_ZZ_1) or (Wine_ZL_2 NE Wine_ZZ_2) or (Wine_ZL_2 NE Wine_ZZ_3)or (Wine_ZL_2 NE Wine_ZZ_4) 
+or (Wine_ZL_3 NE Wine_ZL_4) or (Wine_ZL_3 NE Wine_ZZ_1) or (Wine_ZL_3 NE Wine_ZZ_2) or (Wine_ZL_3 NE Wine_ZZ_3) or (Wine_ZL_3 NE Wine_ZZ_4) 
+or (Wine_ZL_4 NE Wine_ZZ_1) or (Wine_ZL_1 NE Wine_ZZ_2) or (Wine_ZL_1 NE Wine_ZZ_3) or (Wine_ZL_1 NE Wine_ZZ_4)
+or (Wine_ZZ_1 NE Wine_ZZ_2) or (Wine_ZZ_1 NE Wine_ZZ_3) or (Wine_ZZ_1 NE Wine_ZZ_4)
+or (Wine_ZZ_2 NE Wine_ZZ_3) or (Wine_ZZ_2 NE Wine_ZZ_4)
+or (Wine_ZZ_3 NE Wine_ZZ_4) tag=2.
+freq tag. 
+if (Method_ZZ_1 NE Method_ZZ_2) or (Method_ZZ_1 NE Method_ZZ_3) or (Method_ZZ_1 NE Method_ZZ_4)
+or (Method_ZZ_2 NE Method_ZZ_3) or (Method_ZZ_2 NE Method_ZZ_4)
+or  (Method_ZZ_3 NE Method_ZZ_4) tag=3.
+freq tag.
+sort cases by tag (d).
+save out  '/Users/apple/Desktop/final cleaned by ZL_ZZ.sav'.
+get file '/Users/apple/Desktop/IMC_To be added to the IMC folder/final_cleaned_by_ZL_ZZ.sav'.
+sort cases by filename.
+if Bottle_ZL_1>0 bottle=Bottle_ZL_1. 
+if Bottle_ZL_2>0 bottle=Bottle_ZL_2. 
+if Bottle_ZL_3>0 bottle=Bottle_ZL_3. 
+if Bottle_ZL_4>0 bottle=Bottle_ZL_4. 
+if Wine_ZL_1>0 wine=Wine_ZL_1. 
+if Wine_ZL_2>0 wine=Wine_ZL_2. 
+if Wine_ZL_3>0 wine=Wine_ZL_3. 
+if Wine_ZL_4>0 wine=Wine_ZL_4. 
+if Wine_ZZ_1>0 wine=Wine_ZZ_1. 
+if Wine_ZZ_2>0 wine=Wine_ZZ_2.
+if Wine_ZZ_3>0 wine=Wine_ZZ_3.
+if Wine_ZZ_4>0 wine=Wine_ZZ_4.
+if Method_ZZ_1>0 method=Method_ZZ_1. 
+if Method_ZZ_2>0 method=Method_ZZ_2.
+if Method_ZZ_3>0 method=Method_ZZ_3.
+if Method_ZZ_4>0 method=Method_ZZ_4.
+exe. 
+freq method.
+freq bottle wine.
+
+**del temporary variables. 
+del var Wine_ZZ_4 Method_ZZ_4 Bottle_ZL_1 Wine_ZL_1 Wine_ZZ_1 Method_ZZ_1 Method_ZL_1Bottle_ZL_2 Wine_ZL_2
+Wine_ZZ_2 Method_ZZ_2 Bottle_ZL_3 Wine_ZL_3 Wine_ZZ_3 Method_ZZ_3 Bottle_ZL_4 Wine_ZL_4.
+del var tag.
+sort cases by Notes Notes_ZZ Notes_ZZ_2 Note_ZZ_3 (d). 
+sort cases by Notes_ZZ_2 Note_ZZ_3(d).
+del var Notes_ZZ_2 Note_ZZ_3.
+sort cases by Revision(d).
+del var Revision.
+del var Notes_ZZ.
+sort cases by wine.
+sort cases by bottle.
+recode bottle ( 4=1) (2=1) (1=0) (3=2)into bottle_combine.
+freq bottle bottle_combine.
+recode wine (2=0) (1=0) (4=1) (3=1) (5=1) (6=1) into wine_combine. 
+exe. 
+freq wine wine_combine. 
+
+sort cases by year.
+split files by year.
+CROSSTABS  bottle_combine by wine_combine
+  /TABLES=bottle_combine BY wine_combine 
+  /FORMAT=AVALUE TABLES 
+  /CELLS=COUNT TOTAL 
+  /COUNT ROUND CELL.
+
+sort cases by filename.
+SAVE OUTFILE='/Users/apple/Desktop/IMC_To be added to the IMC folder/final_cleaned_by_ZL_ZZ.sav' 
+  /COMPRESSED.
+
+***weight by bottle (old, new,method), wine (old, new) and journal (ad, pr). 
+
+get file '/Users/apple/Desktop/IMC_To be added to the IMC folder/final_cleaned_by_ZL_ZZ.sav' .
+recode journal (1=1)(2=1)(3=1) (4=0) (5=0) into journal.ad. 
+exe. 
+sort cases by journal.
+freq journal.ad. 
+freq bottle_combine wine_combine journal.ad.
+if bottle_combine=0 & wine_combine=0 & journal.ad=0 filter=333. 
+if bottle_combine=0 & wine_combine=0 & journal.ad=1 filter=331. 
+if bottle_combine=0 & wine_combine=1 & journal.ad=0 filter=313. 
+if bottle_combine=0 & wine_combine=1 & journal.ad=1 filter=311. 
+if bottle_combine=1 & wine_combine=0 & journal.ad=0 filter=133. 
+if bottle_combine=1 & wine_combine=0 & journal.ad=1 filter=131. 
+if bottle_combine=1 & wine_combine=1 & journal.ad=0 filter=113. 
+if bottle_combine=1 & wine_combine=1 & journal.ad=1 filter=111. 
+if bottle_combine=2 & wine_combine=0 & journal.ad=0 filter=233. 
+if bottle_combine=2 & wine_combine=0 & journal.ad=1 filter=231. 
+if bottle_combine=2 & wine_combine=1 & journal.ad=0 filter=213. 
+if bottle_combine=2 & wine_combine=1 & journal.ad=1 filter=211. 
+
+exe.
+freq filter.
+crosstab bottle_combine by wine_combine by journal.
+sort cases by filter. 
+aggre out */break=filter/n.filter=n(filter).
+exe. 
+save out '/Users/apple/Desktop/IMC_To be added to the IMC folder/filter.population.sav'.
+
+***create % of each category in the sample. 
+get file  '/Users/apple/Desktop/IMC_To be added to the IMC folder/imc_manual_coding_results.sav'.
+del var justification2.
+sort cases by relevant journal year volume pages. 
+***manually recode the variable "justification (i.e., justification.revise)" for the cases whose value of relevant equals to to 2(i.e, method). 
+if relevant <>2 justification.revise=justification.
+exe. 
+crosstab  relevant by justification.revise.
+freq relevant justification2  justification journal.
+recode relevant (0=0) (1=1) (2=2) (3=1) into relevant3.
+variable labels relevant3 'relevant for weight'. 
+freq relevant3 relevant.
+recode journal (1=1)(2=1)(3=1) (4=0) (5=0) into journal.ad.
+variable labels journal.ad 'recoded journal for weight'.
+exe. 
+freq journal journal.ad.
+freq justification.revise.
+recode justification.revise (0=0) (2=0) (1=1)(3=1)  into justification3.
+variable labels justification3 'justification for weight'. 
+exe. 
+freq justification.revise justification3.
+save out  '/Users/apple/Desktop/IMC_To be added to the IMC folder/imc_manual_coding_results.sav'.
+
+if relevant3=0 & justification3=0 & journal.ad=0 filter.s=333. 
+if relevant3=0 & justification3=0 & journal.ad=1 filter.s=331. 
+if relevant3=0 & justification3=1 & journal.ad=0 filter.s=313. 
+if relevant3=0 & justification3=1 & journal.ad=1 filter.s=311. 
+if relevant3=1 & justification3=0 & journal.ad=0 filter.s=133. 
+if relevant3=1 & justification3=0 & journal.ad=1 filter.s=131. 
+if relevant3=1 & justification3=1 & journal.ad=0 filter.s=113. 
+if relevant3=1 & justification3=1 & journal.ad=1 filter.s=111. 
+if relevant3=2 & justification3=0 & journal.ad=0 filter.s=233. 
+if relevant3=2 & justification3=0 & journal.ad=1 filter.s=231. 
+if relevant3=2 & justification3=1 & journal.ad=0 filter.s=213. 
+if relevant3=2 & justification3=1 & journal.ad=1 filter.s=211. 
+exe.
+freq filter.s.
+sort cases by filter.s.
+save out '/Users/apple/Desktop/IMC_To be added to the IMC folder/imc_manual_coding_results.sav'.
+
+aggre out */break=filter.s/n.filter.s=n(filter.s).
+exe. 
+save out '/Users/apple/Desktop/IMC_To be added to the IMC folder/filter.sample.sav'.
+get file '/Users/apple/Desktop/IMC_To be added to the IMC folder/filter.sample.sav'.
+rename var filter.s=filter.
+match files file * /file '/Users/apple/Desktop/IMC_To be added to the IMC folder/filter.population.sav'/by filter.
+exe. 
+compute brk=1.
+exe. 
+aggre out/break=brk/total.n.filter.s=sum(n.filter.s)/total.n.filter=sum(n.filter).
+exe. 
+compute p.s=n.filter.s/total.n.filter.s.
+compute p.p=n.filter/total.n.filter.
+exe. 
+compute weight=p.s/p.p.
+exe. 
+compute w=p.p/p.s.
+exe.
+
+del var n.filter.s n.filter brk total.n.filter.s total.n.filter p.s p.p weight.
+rename var filter=filter.s.
+save out '/Users/apple/Desktop/IMC_To be added to the IMC folder/weight.sav'.
+get file '/Users/apple/Desktop/IMC_To be added to the IMC folder/imc_manual_coding_results.sav'.
+sort cases by filter.s.
+
+match files table '/Users/apple/Desktop/IMC_To be added to the IMC folder/weight.sav'/ file= */by filter.s/map.
+exe.
+del var filter.s .
+save out '/Users/apple/Desktop/IMC_To be added to the IMC folder/imc_manual_coding_results.sav'.
+
+get file '/Users/apple/Desktop/IMC_To be added to the IMC folder/final_cleaned_by_ZL_ZZ.sav' .
+crosstab bottle_combine by wine_combine.
+
+get file  '/Users/apple/Desktop/IMC_To be added to the IMC folder/imc_manual_coding_results.sav'.
+sort cases by year.
+split files by year.
+weight by w.
+del var weight.
+crosstab relevant3 by justification3
+ /TABLES=relevant3 BY justification3 
+  /FORMAT=AVALUE TABLES 
+  /CELLS=COUNT TOTAL 
+  /COUNT ROUND CELL.
+split files off.
+weight by w.
+freq year.
+freq relevant3 justification3.
+weight off. 
+freq relevant3 justification3.
+COMMENT BOOKMARK;LINE_NUM=126;ID=1.

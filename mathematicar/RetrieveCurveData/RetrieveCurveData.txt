@@ -1,0 +1,23 @@
+# Mathematica Syntax to retrieve data from curve figure
+# ¼ÆËãÊ¿ wlf1985@gmail.com
+# 20120203
+
+retrieveCurveData[figure_, xMax_, yMax_] := Module[
+  {pdata, x, y, pdata1, pdata2, pdata3, positions1, positions2, positions3, positions4, days, getMeanTraffic, traffics, realTraffics, realDays, finaldata},
+  pdata = ImageData[figure];
+  {x, y} = ImageDimensions[figure];
+  pdata1 = Select[Flatten[pdata, 1], Length@Tally@# > 1 &];
+
+  pdata2 = FindClusters[pdata1, 5];
+  pdata3 = Union[pdata2[[3]]];
+  positions1 = Position[pdata, #] & /@ pdata3;
+  positions2 = Union[Reverse /@ Flatten[positions1, 1]];
+  positions3 = Transpose[{positions2[[All, 1]], y - positions2[[All, 2]]}];
+  positions4 = Transpose[{Round[positions3[[All, 1]]*xMax/x], 
+  positions3[[All, 2]]}];
+  days = Union[positions4[[All, 1]]];
+  getMeanTraffic[day_] := Mean@Select[positions4, #[[1]] == day &][[All, 2]];
+  traffics = getMeanTraffic /@ days;
+  realTraffics = traffics*yMax/y // N;
+  finaldata = Transpose[{days, realTraffics}]
+  ] 

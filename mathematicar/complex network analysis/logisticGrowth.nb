@@ -1,0 +1,132 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      3729,        123]
+NotebookOptionsPosition[      3255,        102]
+NotebookOutlinePosition[      3599,        117]
+CellTagsIndexPosition[      3556,        114]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "'"}], "[", "t", "]"}], "\[Equal]", 
+      RowBox[{"\[Beta]", " ", 
+       RowBox[{"x", "[", "t", "]"}], 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"x", "[", "t", "]"}]}], ")"}]}]}], ",", 
+     RowBox[{
+      RowBox[{"x", "[", "0", "]"}], "\[Equal]", "x0"}]}], "}"}], ",", 
+   RowBox[{"x", "[", "t", "]"}], ",", "t"}], "]"}]], "Input",
+ CellChangeTimes->{{3.572297072518874*^9, 3.5722970732249146`*^9}, {
+  3.5722975115589857`*^9, 3.5722975340492725`*^9}, {3.572297627774633*^9, 
+  3.5722976369771595`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], "\[Rule]", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"t", " ", "\[Beta]"}]], " ", "x0"}], 
+     RowBox[{"1", "-", "x0", "+", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"t", " ", "\[Beta]"}]], " ", "x0"}]}]]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.572297535216339*^9, 3.5722975423907495`*^9}, 
+   3.57229764048536*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "'"}], "[", "t", "]"}], "\[Equal]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"\[Beta]", " ", "-", 
+         RowBox[{"\[Beta]", " ", "*", 
+          RowBox[{"x", "[", "t", "]"}]}], "-", " ", "\[Gamma]"}], " ", ")"}], 
+       "*", 
+       RowBox[{"x", "[", "t", "]"}]}]}], ",", 
+     RowBox[{
+      RowBox[{"x", "[", "0", "]"}], "\[Equal]", "x0"}]}], "}"}], ",", 
+   RowBox[{"x", "[", "t", "]"}], ",", "t"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5723233658266726`*^9, 3.5723233708889627`*^9}, {
+  3.572323412247328*^9, 3.5723234304003663`*^9}, {3.5723237534528437`*^9, 
+  3.5723237571280537`*^9}, {3.572323811152144*^9, 3.5723238965370274`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DSolve", "::", "\<\"bvfail\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"For some branches of the \
+general solution, unable to solve the conditions.\\\\\\\"\\\", \\\"MT\\\"]\\) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/DSolve/bvfail\\\", \
+ButtonNote -> \\\"DSolve::bvfail\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{
+  3.572323451339564*^9, {3.572323761800321*^9, 3.5723237649144993`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{
+  3.572323451340564*^9, {3.572323761801321*^9, 3.572323764916499*^9}}]
+}, Open  ]]
+},
+WindowSize->{798, 626},
+WindowMargins->{{13, Automatic}, {9, Automatic}},
+FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 659, 18, 31, "Input"],
+Cell[1229, 42, 498, 15, 51, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1764, 62, 786, 20, 31, "Input"],
+Cell[2553, 84, 547, 10, 21, "Message"],
+Cell[3103, 96, 136, 3, 30, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

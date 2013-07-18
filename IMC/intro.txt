@@ -1,0 +1,2 @@
+1.I use the TM_fulltext and imc_manual_coding_resuts to compare the internet Vs non_internet.
+2.see all_tab for the result

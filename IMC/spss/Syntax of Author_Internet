@@ -1,0 +1,164 @@
+* WANG, Chengjun
+* 2011/11/16
+* How author attributes influence their acdemic taste?
+*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~select cases~~~~~~~~~~~~~~~~~~~~~~~~~~.
+freq MC_topic.
+freq mc_topic2.
+* there are 6 papers about mc. I should select cases.
+
+RECODE
+  MC_topic
+  ('ad'=1)  ('pr'=0)  ('mc'=2)  (MISSING=SYSMIS)  INTO  ad .
+EXECUTE .
+
+
+USE ALL.
+COMPUTE filter_$=(ad ~= 2).
+VARIABLE LABEL filter_$ 'ad ~= 2 (FILTER)'.
+VALUE LABELS filter_$  0 'Not Selected' 1 'Selected'.
+FORMAT filter_$ (f1.0).
+FILTER BY filter_$.
+EXECUTE .
+
+********************Dependent variable*************************.
+freq MC_Type.
+freq mc_type2.
+
+
+recode
+  MC_Type
+  ('Internet'=1)  (MISSING=SYSMIS)  (ELSE=0)  INTO  internet1 .
+EXECUTE .
+
+
+recode
+  mc_type2
+  ('Internet'=1)  (MISSING=SYSMIS)  (ELSE=0)  INTO  internet2 .
+EXECUTE .
+
+CROSSTABS
+  /TABLES=internet BY internet3.
+*There are a lot of difference.
+
+recode
+  relevant3
+  (0=0)  (MISSING=SYSMIS)  (ELSE=1)  INTO  internet3 .
+EXECUTE .
+
+
+recode
+  relevant
+  (0=0)  (MISSING=SYSMIS)  (ELSE=1)  INTO  internet4 .
+exe .
+
+* internet3==internet4, so i should use relevant to generate internet.
+*independent variable is relevant, recode it into dummy variables or leave it to multiple .
+* recode relevant .
+
+recode
+  relevant
+  (1=0)  (MISSING=SYSMIS)  (ELSE=1)  INTO  internet.
+exe .
+
+freq internet.  *There are 36.3% studies which concerns internet.
+
+correlations
+ /variables = internet1 internet2 internet3 internet4 internet
+ /print = nosig.
+*~~~~~~~~~~~~~~~~~~~~~~~~~~independent variables~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
+* ad 1, 0.
+* Funding 0, 1, 9 not sure.
+
+recode
+ Funding
+  (1=1) (0=0) (9=SYSMIS)  (MISSING=SYSMIS)  INTO  fundingr.
+exe .
+
+* Author_N.
+* Purpose 1, 2, 3, 9 not sure.
+recode
+  purpose
+ (1=1) (2=2) (3=3) (MISSING=SYSMIS) (ELSE=SYSMIS) INTO purposer.
+exe.
+
+* author_rank 0 unknown, 1:8, 9 other.
+recode author_rank (MISSING=SYSMIS) (0=SYSMIS) (1 thru 9=Copy) (ELSE=SYSMIS) INTO authorankr.
+exe.
+
+* location  needs to be recoded.
+freq location.
+* year  2000:2010.
+* MC_Model1,2,3,4, however, i suspect its accuracy. so I DON'T use it.
+*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~logistic model~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
+* zhanglun suggests to filter out relevant==3.
+USE ALL.
+COMPUTE filter_$=(relevant3 ~= 2).
+VARIABLE LABELS filter_$ 'relevant3 ~= 2 (FILTER)'.
+VALUE LABELS filter_$ 0 'Not Selected' 1 'Selected'.
+FORMATS filter_$ (f1.0).
+FILTER BY filter_$.
+EXECUTE.
+
+LOGISTIC REGRESSION VARIABLES internet
+  /METHOD=ENTER ad Author_N authorankr fundingr purposer year  
+  /CONTRAST (purposer)=Indicator
+  /CRITERIA=PIN(.05) POUT(.10) ITERATE(20) CUT(.5).
+* i find that authorankr and fundingr are significant relevant to Internet study.
+
+LOGISTIC REGRESSION VARIABLES internet
+  /METHOD=ENTER ad Author_N authorankr fundingr purposer year 
+  /CONTRAST (purposer)=Indicator
+  /SAVE=RESID
+  /CRITERIA=PIN(.05) POUT(.10) ITERATE(20) CUT(.5).
+
+* run unianova to detect interaction.
+UNIANOVA RES_1 BY ad Author_N authorankr fundingr year
+  /METHOD=SSTYPE(3)
+  /INTERCEPT=INCLUDE
+  /CRITERIA=ALPHA(0.05)
+  /DESIGN=ad Author_N authorankr fundingr year Author_N*ad Author_N*authorankr Author_N*fundingr 
+    Author_N*year ad*authorankr ad*fundingr ad*year authorankr*fundingr authorankr*year fundingr*year 
+    Author_N*ad*authorankr Author_N*ad*fundingr Author_N*ad*year Author_N*authorankr*fundingr 
+    Author_N*authorankr*year Author_N*fundingr*year ad*authorankr*fundingr ad*authorankr*year 
+    ad*fundingr*year authorankr*fundingr*year.
+
+
+LOGISTIC REGRESSION VARIABLES internet
+  /METHOD=ENTER ad Author_N authorankr fundingr purposer year 
+ ad*Author_N*authorankr   ad*year  ad*authorankr  authorankr*year  Author_N*authorankr*year   Author_N*year 
+  /CONTRAST (purposer)=Indicator
+  /CRITERIA=PIN(.05) POUT(.10) ITERATE(20) CUT(.5).
+
+
+
+LOGISTIC REGRESSION VARIABLES internet
+  /METHOD=ENTER ad Author_N authorankr fundingr purposer year 
+  ad*year    ad*authorankr    authorankr*year    Author_N*year 
+  /CONTRAST (purposer)=Indicator
+  /CRITERIA=PIN(.05) POUT(.10) ITERATE(20) CUT(.5).
+*  only ad*authorankr is significant.
+
+LOGISTIC REGRESSION VARIABLES internet
+  /METHOD=ENTER ad Author_N authorankr fundingr purposer year 
+ ad*authorankr     ad*Author_N   
+  /CONTRAST (purposer)=Indicator
+  /CRITERIA=PIN(.05) POUT(.10) ITERATE(20) CUT(.5).
+*This model indicates that the more the author numbers, the larger possibility of internet study.
+* and, compared to pr study, the influence of author numbers in ad study on internet is smaller .
+
+
+LOGISTIC REGRESSION VARIABLES internet
+  /METHOD=ENTER ad Author_N authorankr fundingr purposer year ad*fundingr location 
+  /CONTRAST (purposer)=Indicator
+  /CONTRAST (location)=Indicator
+  /SAVE=RESID
+  /CRITERIA=PIN(.05) POUT(.10) ITERATE(20) CUT(.5).
+*location is not significant.
+
+LOGISTIC REGRESSION VARIABLES internet
+  /METHOD=ENTER ad Author_N authorankr fundingr purposer year 
+ ad*authorankr     ad*Author_N    ad*Author_N*authorankr    Author_N*authorankr*year
+  /CONTRAST (purposer)=Indicator
+  /CRITERIA=PIN(.05) POUT(.10) ITERATE(20) CUT(.5).
+
+

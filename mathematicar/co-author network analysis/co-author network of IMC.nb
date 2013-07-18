@@ -1,0 +1,397 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     12736,        388]
+NotebookOptionsPosition[     11061,        324]
+NotebookOutlinePosition[     11405,        339]
+CellTagsIndexPosition[     11362,        336]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Coauthor Network Analysis: 
+Investigation into Endnote Bibliographic Data\
+\>", "Title",
+ CellChangeTimes->{{3.5137468493443365`*^9, 3.513746918894315*^9}, {
+  3.5137642275523133`*^9, 3.5137642534367943`*^9}, {3.5137725265679903`*^9, 
+  3.5137725302432003`*^9}}],
+
+Cell["     Wang Chengjun", "Subtitle",
+ CellChangeTimes->{{3.513746876688901*^9, 3.5137468827562475`*^9}, {
+  3.513752566125318*^9, 3.5137525670603714`*^9}}],
+
+Cell["     20110507@HALL 8", "Subtitle",
+ CellChangeTimes->{{3.5137488721860366`*^9, 3.5137488800154843`*^9}, {
+  3.5137525635681715`*^9, 3.513752564655234*^9}}],
+
+Cell[TextData[{
+ StyleBox["http", "Text"],
+ " : // mathgis.blogspot.com/2010/04/play - with - bibliographic - data.html"
+}], "Text",
+ CellChangeTimes->{3.5137525513554735`*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Data Clean", "Section",
+ CellChangeTimes->{{3.513748808727407*^9, 3.5137488308856745`*^9}, {
+  3.513752629818961*^9, 3.5137526358953085`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Imort xml data", "Subsection",
+ CellChangeTimes->{{3.51375260217638*^9, 3.5137526060666027`*^9}, {
+  3.5137526399575405`*^9, 3.513752640416567*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"xml", "=", 
+    RowBox[{
+    "Import", "[", "\"\<D:/Jonathan's COM8005/IMC/imc review.xml\>\"", 
+     "]"}]}], ";"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"note", ":", " ", 
+     RowBox[{"in", " ", "this", " ", "way"}]}], ",", " ", 
+    RowBox[{"you", " ", "can", " ", "add", " ", "your", " ", "annotation"}]}],
+    "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.5137464941790223`*^9, 3.5137465052086535`*^9}, {
+   3.513746663968734*^9, 3.513746665186804*^9}, 3.513746965724993*^9, 
+   3.5137484345920076`*^9, {3.5137512139959803`*^9, 3.513751215052041*^9}, {
+   3.5137518585298457`*^9, 3.5137518852083716`*^9}, {3.5137519181322546`*^9, 
+   3.513751930828981*^9}, {3.513754187571059*^9, 3.5137541917222967`*^9}, {
+   3.5137557095951138`*^9, 3.513755769593546*^9}, {3.5137706625543747`*^9, 
+   3.5137706664825993`*^9}, {3.5137730280676737`*^9, 3.513773029902779*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Get authors information", "Subsection",
+ CellChangeTimes->{{3.5137526468189335`*^9, 3.513752657563548*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"authors", "=", 
+   RowBox[{"Cases", "[", 
+    RowBox[{"xml", ",", 
+     RowBox[{
+      RowBox[{"XMLElement", "[", 
+       RowBox[{"\"\<authors\>\"", ",", "_", ",", "authors_"}], "]"}], 
+      "\[Rule]", "authors"}], ",", "Infinity"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{3.513748239442846*^9, 3.513748430819792*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"names", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Cases", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{
+        RowBox[{"XMLElement", "[", 
+         RowBox[{"\"\<author\>\"", ",", "_", ",", 
+          RowBox[{"{", 
+           RowBox[{"XMLElement", "[", 
+            RowBox[{"\"\<style\>\"", ",", "_", ",", "name_"}], "]"}], "}"}]}],
+          "]"}], "\[Rule]", "name"}]}], "]"}], "&"}], "/@", "authors"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"in", " ", "this", " ", "case"}], ",", " ", 
+    RowBox[{
+    "no", " ", "need", " ", "to", " ", "flatten", " ", "so", " ", "i", " ", 
+     "fix", " ", "the", " ", "flatten", " ", "level", " ", "as", " ", "0"}]}],
+    "*)"}]}]}], "Input",
+ CellChangeTimes->{
+  3.5137486321493073`*^9, {3.513748679116994*^9, 3.5137487312389746`*^9}, 
+   3.513750271324063*^9, {3.513750413743209*^9, 3.5137504154043036`*^9}, {
+   3.513750529669839*^9, 3.513750529874851*^9}, {3.513751460390074*^9, 
+   3.5137514853265*^9}, {3.513752162695243*^9, 3.5137521697746477`*^9}, 
+   3.513770012700205*^9, {3.513771249073921*^9, 3.5137712649388285`*^9}, {
+   3.5137715705583096`*^9, 3.5137716429574504`*^9}, {3.5137716971615505`*^9, 
+   3.5137717337116413`*^9}, {3.5137717785462055`*^9, 
+   3.5137717787002144`*^9}, {3.513771831192217*^9, 3.5137718439909487`*^9}, {
+   3.5137720163608074`*^9, 3.51377202042004*^9}, {3.5137723346630135`*^9, 
+   3.5137723349780316`*^9}, {3.51377242568522*^9, 3.513772451006668*^9}, {
+   3.5137728934559746`*^9, 3.5137729236807036`*^9}, {3.5137730109536953`*^9, 
+   3.5137730168330317`*^9}, {3.5138358660674176`*^9, 3.5138358731342297`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "names", "]"}]], "Input",
+ CellChangeTimes->{{3.513772983322115*^9, 3.5137729903125143`*^9}}],
+
+Cell[BoxData["6848"], "Output",
+ CellChangeTimes->{3.5137729912455683`*^9, 3.513835788285681*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Caculate the distribution", "Subsection",
+ CellChangeTimes->{{3.513754343568982*^9, 3.5137543508533983`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"table", "=", 
+  RowBox[{"Sort", "[", 
+   RowBox[{
+    RowBox[{"Tally", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Length", "[", "#", "]"}], "&"}], "/@", "names"}], "]"}], ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"#1", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], "<", 
+      RowBox[{"#2", "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], "&"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.5137661693803797`*^9, 3.513766173258601*^9}, 
+   3.513769914228573*^9, 3.5137728768120227`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"0", ",", "6848"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.513772877730075*^9, 3.513835788316881*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"table", ",", 
+   RowBox[{"Filling", "\[Rule]", "Axis"}], ",", 
+   RowBox[{"FillingStyle", "\[Rule]", "Blue"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Number of coauthor\>\"", ",", "\"\<Frequency\>\""}], 
+     "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5137661476681376`*^9, 3.5137661774808426`*^9}, {
+  3.5137662190402203`*^9, 3.5137662352231455`*^9}, {3.5137663095393963`*^9, 
+  3.5137663149647064`*^9}, {3.5137663462114935`*^9, 3.5137663506997504`*^9}, {
+  3.5137664171635523`*^9, 3.5137664650202894`*^9}, {3.513766534388257*^9, 
+  3.513766540842626*^9}, {3.5137700194985933`*^9, 3.513770050077343*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[
+  GraphicsComplexBox[{{0., 6848.}, {0., 6848.}, {0., 0.}, {0., 0.}, {0., 
+   6848.}, {0., 6848.}}, {{{}, {}, {}, {}, 
+     {RGBColor[0, 0, 1], LineBox[{3, 1}], LineBox[{4, 2}]}}, {{}, 
+     {Hue[0.67, 0.6, 0.6], PointBox[{5, 6}]}, {}}}],
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{
+    FormBox["\"Number of coauthor\"", TraditionalForm], 
+    FormBox["\"Frequency\"", TraditionalForm]},
+  AxesOrigin->{0, 0},
+  ImageSize->{616., Automatic},
+  PlotRange->{{-1., 1.}, {0., 13696.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ CellChangeTimes->{3.5137700510133963`*^9, 3.5137705406464014`*^9, 
+  3.51377070793297*^9, 3.5137717983463383`*^9, 3.5137720678427525`*^9, 
+  3.5137724562609687`*^9, 3.5138357883324814`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Split the coauthors", "Subsection",
+ CellChangeTimes->{{3.5137593030956507`*^9, 3.5137593110891075`*^9}, 
+   3.5137642214329634`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"split", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"SplitBy", "[", 
+      RowBox[{"#", ",", "\"\<.,\>\""}], "]"}], "&"}], "/@", 
+    RowBox[{"Sort", "[", "names", "]"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.5137585436932154`*^9, 3.513758571500806*^9}, {
+   3.513758611917117*^9, 3.5137586199745784`*^9}, {3.5137586523254285`*^9, 
+   3.513758816784835*^9}, {3.5137588570001354`*^9, 3.513758865880643*^9}, {
+   3.513758964369276*^9, 3.5137589670504303`*^9}, {3.5137591053963428`*^9, 
+   3.5137591164939775`*^9}, 3.5137591770024385`*^9, {3.5137592128114862`*^9, 
+   3.513759215170622*^9}, {3.513759458937564*^9, 3.513759468916135*^9}, {
+   3.5137700284091034`*^9, 3.5137700310352535`*^9}, {3.513835771047651*^9, 
+   3.513835774105256*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Permutations of co-author", "Subsection",
+ CellChangeTimes->{{3.5137637187622123`*^9, 3.513763729628834*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Permutations", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}], "&"}], "/@", "split"}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"however", ",", " ", 
+    RowBox[{
+    "if", " ", "the", " ", "length", " ", "is", " ", "smaller", " ", "than", 
+     " ", "2"}], ",", " ", 
+    RowBox[{"it", " ", "will", " ", "be", " ", "blank"}]}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.5137637403684483`*^9, 3.513763806816249*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["GraphPlot", "Subsection",
+ CellChangeTimes->{{3.513772847485345*^9, 3.513772852613639*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", 
+  RowBox[{"Flatten", "[", 
+   RowBox[{
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Permutations", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"{", "2", "}"}]}], "]"}], "&"}], "/@", "split"}], ",", 
+      "1"}], "]"}], "/.", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x_", ",", "y_"}], "}"}], "\[RuleDelayed]", 
+     RowBox[{"{", 
+      RowBox[{"x", "\[Rule]", "y"}], "}"}]}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5137729513602867`*^9, 3.513772957905661*^9}}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.513772959317742*^9, 3.513835788379281*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GraphPlot", "[", 
+  RowBox[{"Flatten", "[", 
+   RowBox[{
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Permutations", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"{", "2", "}"}]}], "]"}], "&"}], "/@", "split"}], ",", 
+      "1"}], "]"}], "/.", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x_", ",", "y_"}], "}"}], "\[RuleDelayed]", 
+     RowBox[{"{", 
+      RowBox[{"x", "\[Rule]", "y"}], "}"}]}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5137632788390503`*^9, 3.5137632902307014`*^9}, {
+  3.513763328701902*^9, 3.513763366192046*^9}, {3.5137634195410976`*^9, 
+  3.513763510433296*^9}, {3.5137635429031534`*^9, 3.513763578294178*^9}, {
+  3.513770137046317*^9, 3.5137701535142593`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{}]], "Output",
+ CellChangeTimes->{3.513770483563137*^9, 3.513770549303897*^9, 
+  3.513770724282905*^9, 3.5137724686096745`*^9, 3.5138357883948812`*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1272, 673},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 272, 6, 137, "Title"],
+Cell[842, 30, 157, 2, 49, "Subtitle"],
+Cell[1002, 34, 161, 2, 49, "Subtitle"],
+Cell[1166, 38, 176, 4, 29, "Text"],
+Cell[CellGroupData[{
+Cell[1367, 46, 148, 2, 71, "Section"],
+Cell[CellGroupData[{
+Cell[1540, 52, 154, 2, 36, "Subsection"],
+Cell[1697, 56, 955, 20, 52, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2689, 81, 113, 1, 36, "Subsection"],
+Cell[2805, 84, 359, 9, 31, "Input"],
+Cell[3167, 95, 1678, 35, 52, "Input"],
+Cell[CellGroupData[{
+Cell[4870, 134, 131, 2, 31, "Input"],
+Cell[5004, 138, 97, 1, 30, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5150, 145, 115, 1, 36, "Subsection"],
+Cell[CellGroupData[{
+Cell[5290, 150, 519, 15, 31, "Input"],
+Cell[5812, 167, 164, 4, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6013, 176, 703, 13, 31, "Input"],
+Cell[6719, 191, 844, 20, 366, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7612, 217, 139, 2, 36, "Subsection"],
+Cell[7754, 221, 778, 15, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8569, 241, 115, 1, 36, "Subsection"],
+Cell[8687, 244, 509, 14, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9233, 263, 97, 1, 36, "Subsection"],
+Cell[CellGroupData[{
+Cell[9355, 268, 568, 17, 31, "Input"],
+Cell[9926, 287, 92, 1, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10055, 293, 772, 20, 31, "Input"],
+Cell[10830, 315, 179, 3, 374, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

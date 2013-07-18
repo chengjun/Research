@@ -1,0 +1,302 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      9748,        293]
+NotebookOptionsPosition[      8313,        238]
+NotebookOutlinePosition[      8656,        253]
+CellTagsIndexPosition[      8613,        250]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ StyleBox["NetLogo ",
+  Background->None],
+ StyleBox["Mathematica",
+  FontSlant->"Italic",
+  Background->None],
+ StyleBox[" Link",
+  Background->None]
+}], "Title",
+ CellChangeTimes->{{3.519217588983639*^9, 3.519217590244711*^9}, {
+  3.5192176206754513`*^9, 3.519217642241685*^9}, {3.519218393687665*^9, 
+  3.5192184131387777`*^9}},
+ Background->RGBColor[0.9, 1, 1]],
+
+Cell["Wang Chengjun @dorm, 20110710", "Subtitle",
+ CellChangeTimes->{{3.5192176520362453`*^9, 3.5192176637949176`*^9}, {
+  3.5192184297967305`*^9, 3.519218437064146*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[CellGroupData[{
+
+Cell["Start NetLogo", "Section",
+ CellChangeTimes->{{3.5192184771294374`*^9, 3.5192184852049*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NLStart", "[", "\"\<C:\\Program Files\\NetLogo 4.1.3\>\"", "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.519217728949644*^9, 3.51921782101791*^9}, 
+   3.5192179239547977`*^9, {3.519218167522729*^9, 3.519218168014757*^9}, 
+   3.519218242093994*^9, {3.5192192118044586`*^9, 3.519219216132706*^9}, {
+   3.519219877654543*^9, 3.519219890570282*^9}}],
+
+Cell[BoxData[
+ RowBox[{"NLStart", "[", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "$NLHome", " ", "=", " ", "\"\<C:\\\\Program Files\\\\NetLogo 4.1.3\>\""}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.5192195598423653`*^9, 3.5192195612424455`*^9}, 
+   3.519219869991105*^9, 3.5192199103194113`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$NLHome"], "Input"],
+
+Cell[BoxData["\<\"C:\\\\Program Files\\\\NetLogo 4.1.3\"\>"], "Output",
+ CellChangeTimes->{3.5192182908937855`*^9, 3.5192192192808867`*^9, 
+  3.519219409175748*^9, 3.5192195666277533`*^9, 3.519219914260637*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Loading the spiral of silence model", "Subsection",
+ CellChangeTimes->{{3.5192187276107645`*^9, 3.5192187554443564`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NLLoadModel", "[", 
+   RowBox[{"ToFileName", "[", 
+    RowBox[{
+     RowBox[{
+     "{", "\"\<D:\\\\writing\\\\Spiral of silence\\\\Spiral of silence\>\"", 
+      "}"}], ",", "\"\<spiral of silence 2011.nlogo\>\""}], "]"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.51921856878168*^9, 3.5192186036446743`*^9}, {
+  3.519218699980184*^9, 3.5192187022423134`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Executing NetLogo Commands", "Subsection",
+ CellChangeTimes->{{3.519218803707117*^9, 3.5192188207460914`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"NLCommand", "[", "\"\<setup\>\"", "]"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"set", " ", "all", " ", "the", " ", "conditions"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NLCommand", "[", "\"\<set population 1500\>\"", "]"}], ";", "  ", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"using", " ", "'"}], 
+    RowBox[{"set", "'"}], " ", "to", " ", "set", " ", "other", " ", 
+    "conditions"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"NLCommand", "[", "\"\<set vision 3\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NLCommand", "[", "\"\<set beta-reference-group 0.01\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NLCommand", "[", "\"\<set alpha-media 0.0001\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NLCommand", "[", "\"\<set media-amplifier 10\>\"", "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.519218888082943*^9, 3.519218896724437*^9}, {
+   3.5192221183997064`*^9, 3.5192221952841043`*^9}, {3.519222337205221*^9, 
+   3.519222337949264*^9}, {3.519270463251487*^9, 3.519270651857274*^9}, {
+   3.5192713752106476`*^9, 3.519271458946437*^9}, 3.519271510432382*^9, {
+   3.5192722121895204`*^9, 3.5192722123455296`*^9}, {3.5192723277421293`*^9, 
+   3.519272371412627*^9}, {3.5195611184069767`*^9, 3.5195611188125772`*^9}, 
+   3.5195617762513323`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Do", "[", 
+   RowBox[{
+    RowBox[{"NLCommand", "[", "\"\<go\>\"", "]"}], ",", 
+    RowBox[{"{", "100", "}"}]}], "]"}], ";", " ", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"it", "'"}], "s", " ", "dangerous", " ", "if", " ", "the", " ", 
+    "number", " ", "is", " ", "too", " ", "large"}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.5192190661601286`*^9, 3.5192190665711517`*^9}, {
+   3.5192191512599955`*^9, 3.519219151489009*^9}, {3.5192715448073483`*^9, 
+   3.519271561835322*^9}, 3.519272394762963*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NLDoCommand", "[", 
+   RowBox[{"\"\<go\>\"", ",", "10"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.5192222476941013`*^9, 3.519222268918316*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Reporting data from NetLogo", "Subsection",
+ CellChangeTimes->{{3.5192200043707905`*^9, 3.5192200129112797`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NLReport", "[", "\"\<count turtles\>\"", "]"}]], "Input"],
+
+Cell[BoxData["1500.`"], "Output",
+ CellChangeTimes->{
+  3.519220016815503*^9, 3.519222402198939*^9, 3.51927211462994*^9, 
+   3.5192722206510043`*^9, {3.5195611477506285`*^9, 3.5195611646766577`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"NLCommand", "[", "\"\<go\>\"", "]"}], ";", 
+    RowBox[{"NLReport", "[", "\"\<silent-people\>\"", "]"}]}], ",", 
+   RowBox[{"{", "20", "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.5192720872563744`*^9, {3.519272138634313*^9, 3.519272148050852*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "738.`", ",", "743.`", ",", "730.`", ",", "737.`", ",", "731.`", ",", 
+   "729.`", ",", "715.`", ",", "710.`", ",", "705.`", ",", "688.`", ",", 
+   "694.`", ",", "684.`", ",", "684.`", ",", "676.`", ",", "674.`", ",", 
+   "676.`", ",", "673.`", ",", "666.`", ",", "671.`", ",", "673.`"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.5192721191061964`*^9, 3.519272150094969*^9, 
+  3.5192722261983213`*^9, 3.5195613755578284`*^9, 3.519692515009222*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NLDoReport", "[", 
+  RowBox[{"\"\<go\>\"", ",", "\"\<silent-people\>\"", ",", "20"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.519272568778916*^9, 3.5192725750832767`*^9}, {
+   3.51927455899475*^9, 3.5192745636820183`*^9}, 3.519275111384345*^9, 
+   3.5195610613888764`*^9, {3.5195611843482924`*^9, 3.5195612179351516`*^9}, {
+   3.519561391953457*^9, 3.5195615025800514`*^9}, {3.5195617933957624`*^9, 
+   3.5195618048929825`*^9}, {3.519602702018875*^9, 3.5196027083992863`*^9}, {
+   3.5196511492804637`*^9, 3.51965119261734*^9}, {3.5196924779661036`*^9, 
+   3.5196924932939796`*^9}, {3.5196925246977763`*^9, 
+   3.5196925486921487`*^9}, {3.5196926365221725`*^9, 3.51969265151703*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "677.`", ",", "681.`", ",", "678.`", ",", "668.`", ",", "665.`", ",", 
+   "664.`", ",", "657.`", ",", "651.`", ",", "646.`", ",", "643.`", ",", 
+   "643.`", ",", "635.`", ",", "619.`", ",", "609.`", ",", "595.`", ",", 
+   "583.`", ",", "572.`", ",", "571.`", ",", "569.`", ",", "565.`"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.519273397439313*^9, 3.519274808679031*^9, 3.5192751131854477`*^9, {
+   3.519561169824667*^9, 3.519561225142364*^9}, 3.5195614075846844`*^9, {
+   3.5195614385107393`*^9, 3.5195615037500534`*^9}, {3.5195617872181516`*^9, 
+   3.519561806437385*^9}, {3.519602710271289*^9, 3.5196027155908985`*^9}, {
+   3.5196511830389233`*^9, 3.5196511950041437`*^9}, {3.519692504969648*^9, 
+   3.519692550041226*^9}, {3.519692638252271*^9, 3.519692653070119*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Headless Mode", "Section",
+ CellChangeTimes->{{3.5192201781607313`*^9, 3.5192201820319524`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"NLStart", "[", 
+  RowBox[{"$NLHome", ",", 
+   RowBox[{"Headless", "\[Rule]", " ", "True"}]}], "]"}]], "Input"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{624, 665},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 381, 12, 99, "Title"],
+Cell[951, 36, 206, 3, 65, "Subtitle"],
+Cell[CellGroupData[{
+Cell[1182, 43, 98, 1, 71, "Section"],
+Cell[1283, 46, 383, 7, 31, "Input"],
+Cell[1669, 55, 55, 1, 31, "Input"],
+Cell[1727, 58, 252, 6, 31, "Input"],
+Cell[CellGroupData[{
+Cell[2004, 68, 33, 0, 31, "Input"],
+Cell[2040, 70, 210, 2, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2287, 77, 127, 1, 36, "Subsection"],
+Cell[2417, 80, 402, 10, 72, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2856, 95, 116, 1, 36, "Subsection"],
+Cell[2975, 98, 1391, 31, 152, "Input"],
+Cell[4369, 131, 540, 12, 52, "Input"],
+Cell[4912, 145, 184, 4, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5133, 154, 119, 1, 36, "Subsection"],
+Cell[CellGroupData[{
+Cell[5277, 159, 81, 1, 31, "Input"],
+Cell[5361, 162, 199, 3, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5597, 170, 327, 8, 31, "Input"],
+Cell[5927, 180, 490, 9, 50, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6454, 194, 708, 11, 31, "Input"],
+Cell[7165, 207, 820, 14, 50, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8046, 228, 102, 1, 71, "Section"],
+Cell[8151, 231, 134, 3, 31, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

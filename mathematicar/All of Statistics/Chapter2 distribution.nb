@@ -1,0 +1,460 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     16045,        451]
+NotebookOptionsPosition[     14680,        397]
+NotebookOutlinePosition[     15023,        412]
+CellTagsIndexPosition[     14980,        409]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Distribution", "Subtitle",
+ CellChangeTimes->{{3.5329076639663877`*^9, 3.532907668084795*^9}, {
+  3.532916471517809*^9, 3.53291648909904*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["", "Section"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"DiscreteUniformDistribution", "[", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "10"}], "}"}], "]"}], ",", "k"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "1", ",", "10"}], "}"}]}], "]"}], ",", 
+   RowBox[{"Filling", "->", "Axis"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ GraphicsBox[GraphicsComplexBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7GfNBIGd9lABB1Q+BxpfAI0vgsaXQOPLoPEV
+0PhKaHwVNP4HmLtgwAGVy4HGF0Dji6DxJdD4Mmh8BTS+EhpfBY0/eMMPADd9
+aZc=
+   "], {{{}, {}, {}, {}, 
+     {Hue[0.67, 0.6, 0.6], Opacity[0.2], LineBox[{11, 1}], LineBox[{12, 2}], 
+      LineBox[{13, 3}], LineBox[{14, 4}], LineBox[{15, 5}], LineBox[{16, 6}], 
+      LineBox[{17, 7}], LineBox[{18, 8}], LineBox[{19, 9}], 
+      LineBox[{20, 10}]}}, {{}, 
+     {Hue[0.67, 0.6, 0.6], 
+      PointBox[{21, 22, 23, 24, 25, 26, 27, 28, 29, 30}]}, {}}}],
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{0, 0},
+  PlotRange->{{0., 10.}, {0., 0.2}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ CellChangeTimes->{3.5329076950104423`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PDF", "[", 
+  RowBox[{
+   RowBox[{"BernoulliDistribution", "[", "p", "]"}], ",", "k"}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"\[Piecewise]", GridBox[{
+    {
+     RowBox[{"1", "-", "p"}], 
+     RowBox[{"k", "\[Equal]", "0"}]},
+    {"p", 
+     RowBox[{"k", "\[Equal]", "1"}]},
+    {"0", 
+     TagBox["True",
+      "PiecewiseDefault",
+      AutoDelete->False,
+      DeletionWarning->True]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxItemSize->{
+    "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[0.84]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}]}]], "Output",
+ CellChangeTimes->{3.532907771840577*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PDF", "[", 
+  RowBox[{
+   RowBox[{"BernoulliDistribution", "[", "p", "]"}], ",", "k"}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"\[Piecewise]", GridBox[{
+    {
+     RowBox[{"1", "-", "p"}], 
+     RowBox[{"k", "\[Equal]", "0"}]},
+    {"p", 
+     RowBox[{"k", "\[Equal]", "1"}]},
+    {"0", 
+     TagBox["True",
+      "PiecewiseDefault",
+      AutoDelete->False,
+      DeletionWarning->True]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxItemSize->{
+    "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[0.84]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}]}]], "Output",
+ CellChangeTimes->{3.532916542731934*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Binomial", "[", 
+  RowBox[{"100", ",", "5"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5329140892909884`*^9, 3.5329140962013836`*^9}, {
+  3.5329141359606576`*^9, 3.5329141701976156`*^9}, {3.532914347151737*^9, 
+  3.5329143500259013`*^9}, {3.5329144493365817`*^9, 3.5329144651224847`*^9}}],
+
+Cell[BoxData["75287520"], "Output",
+ CellChangeTimes->{{3.532914150480488*^9, 3.5329141708396525`*^9}, 
+   3.532914351874007*^9, {3.532914451318695*^9, 3.5329144673576126`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PDF", "[", 
+  RowBox[{
+   RowBox[{"BinomialDistribution", "[", 
+    RowBox[{"n", ",", "p"}], "]"}], ",", "k"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{"1", "-", "p"}], ")"}], 
+   RowBox[{
+    RowBox[{"-", "k"}], "+", "n"}]], " ", 
+  SuperscriptBox["p", "k"], " ", 
+  RowBox[{"Binomial", "[", 
+   RowBox[{"n", ",", "k"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.532916582168803*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"k", ",", 
+       RowBox[{"PDF", "[", 
+        RowBox[{
+         RowBox[{"BinomialDistribution", "[", 
+          RowBox[{"50", ",", "0.5"}], "]"}], ",", "k"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "0", ",", "50"}], "}"}]}], "]"}], ",", 
+   RowBox[{"Filling", "->", "Axis"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5329150811567197`*^9, 3.5329151697387867`*^9}, {
+  3.5329152162764482`*^9, 3.5329152562207327`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[GraphicsComplexBox[CompressedData["
+1:eJzt1d9LU2EYB/CjRgy6cMQIhRPMMcyGG7odf287j85fYT8g8kpEEcVQUETF
+O/d23YXeShhGhVDQjV0USUG3XRhBdBkUBSMzjUJR8u3d9hR7vjf+A3thO3zO
+95ztnPd9Ht6qkenrY6WWZa2YT/b4bxzo7NiK57XrnssdLyY4Jk/2OzjL9tD5
+nDfYXto3d3+0t9k++mocC/mTeVfQJ63TVdeusm3KaP1q/u0C20+/tbbLrTV2
+gHyWurz56DU7SDt6y3ECn9nV5vqhB5nREjfvGjpt2Y+PUjY7ZBydfb/usGtp
+Jz14b7Gvjx2hcnU3nB4eZtfR9sCXytuZGXY97eV8ix2lUvdseGJymR2jU2s3
+5qbX77AdOjy6cLg09ZDdQGU339DP1SfsRtL9q1e+hZ+ym+j4Q+TH3vIzdjOV
+bPjC3vsv2C2kB5+/877cZLdC3gb3x+H3E6THC/8/Cc/nwvOTfD9F9F28f7uc
+H9VOZ8T8ddCvwvlVHTD/Kbk+KgXr1ynXV3XC+nfRn8L6UF1QP92UPfu/vlQ3
+1F+PrE/VA/XbK+tb9ZKs/0sk+wPHrgsnSNID9oJ94AqwDfaDA+AguBpcAw6B
+a8ERcB24HhwFx8AOuAHcCG4CN4NbwK3gNnAcnAAnwS6YpBXY9IvMwaZfZA42
+/SJzsOkXmYNNv8gcnO+Xghxs+kXmYNMvMgebfrFgFPeX4v5S3F9O3l/+AtMW
+0qo=
+   "], {{{}, {}, {}, {}, 
+     {Hue[0.67, 0.6, 0.6], Opacity[0.2], LineBox[{52, 1}], LineBox[{53, 2}], 
+      LineBox[{54, 3}], LineBox[{55, 4}], LineBox[{56, 5}], LineBox[{57, 6}], 
+      LineBox[{58, 7}], LineBox[{59, 8}], LineBox[{60, 9}], LineBox[{61, 10}],
+       LineBox[{62, 11}], LineBox[{63, 12}], LineBox[{64, 13}], 
+      LineBox[{65, 14}], LineBox[{66, 15}], LineBox[{67, 16}], 
+      LineBox[{68, 17}], LineBox[{69, 18}], LineBox[{70, 19}], 
+      LineBox[{71, 20}], LineBox[{72, 21}], LineBox[{73, 22}], 
+      LineBox[{74, 23}], LineBox[{75, 24}], LineBox[{76, 25}], 
+      LineBox[{77, 26}], LineBox[{78, 27}], LineBox[{79, 28}], 
+      LineBox[{80, 29}], LineBox[{81, 30}], LineBox[{82, 31}], 
+      LineBox[{83, 32}], LineBox[{84, 33}], LineBox[{85, 34}], 
+      LineBox[{86, 35}], LineBox[{87, 36}], LineBox[{88, 37}], 
+      LineBox[{89, 38}], LineBox[{90, 39}], LineBox[{91, 40}], 
+      LineBox[{92, 41}], LineBox[{93, 42}], LineBox[{94, 43}], 
+      LineBox[{95, 44}], LineBox[{96, 45}], LineBox[{97, 46}], 
+      LineBox[{98, 47}], LineBox[{99, 48}], LineBox[{100, 49}], 
+      LineBox[{101, 50}], LineBox[{102, 51}]}}, {{}, 
+     {Hue[0.67, 0.6, 0.6], 
+      PointBox[{103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 
+       115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 
+       129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 
+       143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153}]}, {}}}],
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{0, 0},
+  PlotRange->{{0., 50.}, {0., 0.11227517265921703`}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ CellChangeTimes->{
+  3.5329148043198853`*^9, {3.532915082720809*^9, 3.5329151707888465`*^9}, {
+   3.53291521735651*^9, 3.532915257082782*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"k", ",", 
+       RowBox[{"PDF", "[", 
+        RowBox[{
+         RowBox[{"PoissonDistribution", "[", "5", "]"}], ",", "k"}], "]"}]}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "0", ",", "30"}], "}"}]}], "]"}], ",", 
+   RowBox[{"Filling", "->", "Axis"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5329156294160786`*^9, 3.532915630001112*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[GraphicsComplexBox[CompressedData["
+1:eJzt09srgwEYBvAvRZsSSllLZmuTvpaGOc2+fS8y5YJyDEmpKW2MQiESN0o5
+5Vgu+HKjlFNmDsn5sJocSrmR3RCNuCJqob0uvPkPeOrt7ffcP/IKa67Jh2GY
+ss/7+t9pzAu45sdaeK+eeDZf5D7gJ9EMaKv8b1d6l9AiKPS5Gtp72UIHgbuj
+4N3WsI8OIZaA9KHutHp5Gx0GNZuC3836KjoCMuyq3UDbHFoBgu/zZWW/gFai
+B9CRIPNt0xld7ego6BKd2WQKC5qFNClvkkwVoNXQoSrxmO8N6GiY2bnxZI4r
+0RoYqZ/wFO+I0TGwKQtd1Oc8GryOBXPn8vPsxQk6Dl6N3Yd9K/NoLbofHQ+z
+R86FVlctOgGqizRC6nw2OhE4MTtqmmPRSVC24PRMc37oZGgrrTM9Olyc1zoI
+brpTDZevoVOg1R4uPjYOovUgV280W18saA6s4fb70Ld0tAH486wehyDlmF/z
+xJMCflJEHEQcQiwhDiOOIFYQK4kjiaOIWWI1cTSxhjiGOJY4jlhLHE+cQJxI
+nEScTKwjTiHWE3PEBuL/ff+VfX8Ao3McUg==
+   "], {{{}, {}, {}, {}, 
+     {Hue[0.67, 0.6, 0.6], Opacity[0.2], LineBox[{32, 1}], LineBox[{33, 2}], 
+      LineBox[{34, 3}], LineBox[{35, 4}], LineBox[{36, 5}], LineBox[{37, 6}], 
+      LineBox[{38, 7}], LineBox[{39, 8}], LineBox[{40, 9}], LineBox[{41, 10}],
+       LineBox[{42, 11}], LineBox[{43, 12}], LineBox[{44, 13}], 
+      LineBox[{45, 14}], LineBox[{46, 15}], LineBox[{47, 16}], 
+      LineBox[{48, 17}], LineBox[{49, 18}], LineBox[{50, 19}], 
+      LineBox[{51, 20}], LineBox[{52, 21}], LineBox[{53, 22}], 
+      LineBox[{54, 23}], LineBox[{55, 24}], LineBox[{56, 25}], 
+      LineBox[{57, 26}], LineBox[{58, 27}], LineBox[{59, 28}], 
+      LineBox[{60, 29}], LineBox[{61, 30}], LineBox[{62, 31}]}}, {{}, 
+     {Hue[0.67, 0.6, 0.6], 
+      PointBox[{63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 
+       78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 
+       93}]}, {}}}],
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{0, 0},
+  PlotRange->{{0., 30.}, {0., 0.1754673697678507}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ CellChangeTimes->{3.5329154523429503`*^9, 3.5329156311371765`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PDF", "[", 
+  RowBox[{
+   RowBox[{"NegativeBinomialDistribution", "[", 
+    RowBox[{"n", ",", "p"}], "]"}], ",", "k"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{"1", "-", "p"}], ")"}], "k"], " ", 
+  SuperscriptBox["p", "n"], " ", 
+  RowBox[{"Binomial", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "1"}], "+", "k", "+", "n"}], ",", 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", "n"}]}], "]"}]}]], "Output",
+ CellChangeTimes->{3.5329166528369274`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"NegativeBinomialDistribution", "[", 
+        RowBox[{"10", ",", 
+         RowBox[{"1", "/", "3"}]}], "]"}], ",", "k"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "0", ",", "50"}], "}"}]}], "]"}], ",", 
+   RowBox[{"Filling", "->", "Axis"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ GraphicsBox[GraphicsComplexBox[CompressedData["
+1:eJzt1etLU3EYwHGbFEUJIl6WbeHGFGdiOm/T6fZ42eaowCmaWdZQRwmCODUj
+NQdq+kJC8pJLI21W3iOjN92wBJuaL6qtMJxZopWSGUSGNOiEz4LzvOoP8MDh
+8Dlfxrnt4SfILUrTc1xcXEzM/ve4ua0pahtOn9p4+l2OJ0ByaVDT3c5XbHIn
+DL9tqJELZGh32L+4fUjsnYb2hEa34gpOex6aCzrL0HKHxoDmwSGzoH74/AW0
+H0y1ZFYvSevRQtD3Sa7+MjShRWD/0D7dtdqKDoAdboGjs8870IFwbEYfJX3T
+hQ6C5irBcluPGR0MdT4e02rxLXQIfMqVWq4oe9GhYH1i22tb6EOHgUH7ZcOx
+3o+WgHWff2pO9QA6nDgCeE2rK3ZXpyMhuCD8Yibf+fso+NrC9XDMOa8XDXz9
+ETUv5zZaCs/K9VkjAzfRMWDIGqnIszvvPxbKWnimUc4NtAxkdXum3omdzxsH
+3Sft3QcfdaLjoYY34VuSakLLIfvMUV8vfhtaAeN3YquUQc1ogG816VZDJb5v
+I0DutnzbqrgRewLMT3pbaxfx+xgTgPeg9exn/1rsiTD4sKT05Ucj9kQoXRgt
+HBFVYk8CWeerpbL0cuxJMK+PcNhkJdiTYUY74CVqKsKeDPd1Y0LLeAF2JSR7
+7HbM/sjHrgQT58Wu3z912FVgnjyh7sk+jl0F3j5cXcZ6BnY1zJ1T3eu/rMWu
+htdTOeYJ18PYUyC0NT36Maiwp0DxAaFg5VoCdg30Tmotd6fx/27UQOF1wRi8
+j8S+hsd/G7C5k9id2JOYS8wj9iMWEouIA4gDiYOIg4lDiEOJw4glxOHEEcSR
+xFHE0cRS4hjiWGIZcRxxPLGcWEEMbBuJmXlhd2JmXtidmJkXdidm5oXdiZl5
+YXdiZl7YnZiZF3YnZuaF3YmZeWF34q31ZWt92Vpf/mt9+QMDsdnr
+   "], {{{}, {}, {}, {}, 
+     {Hue[0.67, 0.6, 0.6], Opacity[0.2], LineBox[{52, 1}], LineBox[{53, 2}], 
+      LineBox[{54, 3}], LineBox[{55, 4}], LineBox[{56, 5}], LineBox[{57, 6}], 
+      LineBox[{58, 7}], LineBox[{59, 8}], LineBox[{60, 9}], LineBox[{61, 10}],
+       LineBox[{62, 11}], LineBox[{63, 12}], LineBox[{64, 13}], 
+      LineBox[{65, 14}], LineBox[{66, 15}], LineBox[{67, 16}], 
+      LineBox[{68, 17}], LineBox[{69, 18}], LineBox[{70, 19}], 
+      LineBox[{71, 20}], LineBox[{72, 21}], LineBox[{73, 22}], 
+      LineBox[{74, 23}], LineBox[{75, 24}], LineBox[{76, 25}], 
+      LineBox[{77, 26}], LineBox[{78, 27}], LineBox[{79, 28}], 
+      LineBox[{80, 29}], LineBox[{81, 30}], LineBox[{82, 31}], 
+      LineBox[{83, 32}], LineBox[{84, 33}], LineBox[{85, 34}], 
+      LineBox[{86, 35}], LineBox[{87, 36}], LineBox[{88, 37}], 
+      LineBox[{89, 38}], LineBox[{90, 39}], LineBox[{91, 40}], 
+      LineBox[{92, 41}], LineBox[{93, 42}], LineBox[{94, 43}], 
+      LineBox[{95, 44}], LineBox[{96, 45}], LineBox[{97, 46}], 
+      LineBox[{98, 47}], LineBox[{99, 48}], LineBox[{100, 49}], 
+      LineBox[{101, 50}], LineBox[{102, 51}]}}, {{}, 
+     {Hue[0.67, 0.6, 0.6], 
+      PointBox[{103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 
+       115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 
+       129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 
+       143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153}]}, {}}}],
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{0, 0},
+  PlotRange->{{0., 51.}, {0., 0.053706089051551636`}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ CellChangeTimes->{3.53291691604259*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{607, 537},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 148, 2, 49, "Subtitle"],
+Cell[CellGroupData[{
+Cell[740, 28, 19, 0, 71, "Section"],
+Cell[CellGroupData[{
+Cell[784, 32, 419, 12, 52, "Input"],
+Cell[1206, 46, 839, 20, 242, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2082, 71, 131, 4, 31, "Input"],
+Cell[2216, 77, 857, 26, 57, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3110, 108, 131, 4, 31, "Input"],
+Cell[3244, 114, 857, 26, 57, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4138, 145, 310, 5, 31, "Input"],
+Cell[4451, 152, 177, 2, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4665, 159, 152, 4, 31, "Input"],
+Cell[4820, 165, 302, 10, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5159, 180, 568, 15, 52, "Input"],
+Cell[5730, 197, 2678, 48, 240, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8445, 250, 485, 14, 52, "Input"],
+Cell[8933, 266, 1878, 35, 240, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10848, 306, 160, 4, 31, "Input"],
+Cell[11011, 312, 362, 12, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11410, 329, 420, 12, 52, "Input"],
+Cell[11833, 343, 2807, 49, 240, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,132 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      3769,        123]
+NotebookOptionsPosition[      3403,        107]
+NotebookOutlinePosition[      3746,        122]
+CellTagsIndexPosition[      3703,        119]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Seedgroups", "[", "n_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "url1", ",", "t", ",", "label1", ",", "label2", ",", "groupaddress", ",",
+       "groupname", ",", "groupn"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"url1", "=", 
+      RowBox[{
+      "\"\<http://t.sina.com.cn/pub/star/sort_fans.php?sortid=14&t=&p=\>\"", "<>", 
+       RowBox[{"ToString", "[", "n", "]"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"t", "=", 
+      RowBox[{"Import", "[", 
+       RowBox[{"url1", ",", "\"\<XMLObject\>\""}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"label1", "=", 
+      RowBox[{"Cases", "[", 
+       RowBox[{"t", ",", 
+        RowBox[{"XMLElement", "[", 
+         RowBox[{"\"\<span\>\"", ",", 
+          RowBox[{"{", 
+           RowBox[{"\"\<class\>\"", "\[Rule]", "\"\<pl2\>\""}], "}"}], ",", 
+          "_"}], "]"}], ",", "Infinity"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"label2", "=", 
+      RowBox[{"Cases", "[", 
+       RowBox[{"label1", ",", 
+        RowBox[{"XMLElement", "[", 
+         RowBox[{"\"\<a\>\"", ",", "_", ",", "_"}], "]"}], ",", "Infinity"}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"groupaddress", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "[", 
+         RowBox[{"[", "2", "]"}], "]"}], "&"}], "/@", "label2"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"groupname", "=", 
+      RowBox[{"Flatten", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "3", "]"}], "]"}], "&"}], "/@", "label2"}], ",", 
+        "1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"groupn", "=", 
+      RowBox[{"Transpose", "[", 
+       RowBox[{"{", 
+        RowBox[{"groupaddress", ",", "groupname"}], "}"}], "]"}]}]}]}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.5048393568900347`*^9, 3.504839359170165*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"indexNumbers", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"i", ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "24", ",", "1"}], "}"}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{
+  3.50483940820997*^9, 3.50483943881472*^9, 3.504839489018592*^9, {
+   3.5048395213354406`*^9, 3.5048395274847918`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Seedurls", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Seedgroups", "/@", "indexNumbers"}], ",", "1"}], "]"}]}], 
+  ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"urls", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"#", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "&"}], "/@", "Seedurls"}]}], 
+  ";"}]], "Input"]
+},
+WindowSize->{624, 665},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 2124, 56, 232, "Input"],
+Cell[2672, 78, 354, 10, 31, "Input"],
+Cell[3029, 90, 184, 6, 31, "Input"],
+Cell[3216, 98, 183, 7, 31, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

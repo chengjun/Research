@@ -1,0 +1,602 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     24500,        593]
+NotebookOptionsPosition[     23224,        545]
+NotebookOutlinePosition[     23568,        560]
+CellTagsIndexPosition[     23525,        557]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["ElectricalGridSocketImages", "Subtitle",
+ CellChangeTimes->{3.537681983275014*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CountryData", "[", 
+  RowBox[{"\"\<Hong Kong\>\"", ",", "\"\<ElectricalGridSocketImages\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.53768160748952*^9, 3.537681618230135*^9}, {
+  3.537689010725204*^9, 3.5376890184086437`*^9}, {3.5376890570978565`*^9, 
+  3.537689084001395*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxtUsERwyAMi2UbmKCfvrpSR+gC3f9X2YaE68U5jljIwghen+/7g+M4nhwP
+jpEB8wgzHWeomyIX1XzhZrgYMCumzRyYpEgacomiLI9/R1EpPHWbFsJc/RJm
+PZzqBMcWhE3VSvgK14qB3lvyemdi7C53E5EoaCKxkxa6eq1J44Q2/oJU7neH
+2h1XbxX0dMxn39HXsEXugkVFoLWfSM6aXdGL8r/14MKRkqGytHl/KLNIDtPD
+EI8q368kUKwsFbfj4TQb7UI3Bq8IIz/fXdF6O77ezg+U8g/l
+     "], {{0, 0}, {22, 27}},
+     ColorFunction->(Apply[RGBColor, 
+       Part[{{1., 1., 1., 1.}, {0.09411764705882353, 0.09411764705882353, 
+        0.09411764705882353, 1.}, {0.3215686274509804, 0.3215686274509804, 
+        0.3215686274509804, 1.}, {0.5490196078431373, 0.5490196078431373, 
+        0.5490196078431373, 1.}, {0.6470588235294118, 0.6470588235294118, 
+        0.6470588235294118, 1.}, {0.6784313725490196, 0.6784313725490196, 
+        0.6784313725490196, 1.}, {0.807843137254902, 0.807843137254902, 
+        0.807843137254902, 1.}, {0., 0., 0., 1.}}, #]]& ),
+     ColorFunctionScaling->False],
+    Background->None,
+    ImageSize->{22, 27},
+    PlotRange->{{0, 22}, {0, 27}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxtUsERwyAMC5ZxmKC/PrpSR8gC3f9X2Q5JCPEdB1GEbMt8tt93k2VZ3lwv
+rraHVAbaGOKI3OH8lnqj5q4DGco/QlQvTK2KjKrSicTyLAI1dFAuWojEMoAh
+FwnQ0Av1A5jSK0cpa/JKKc6hfKLSUaEGw1WsK/iBaMWQK25g9snRJ653oLMC
+i9VJgkUfTsPWoxWJ3jysF+29HT4QLacPTSzYWEtsarur7m92HKWe5vVZ2OC1
+J2j3aT7P+Pk9sBD6AZuelNbLAP8E9BFT
+     "], {{0, 0}, {22, 29}},
+     ColorFunction->(Apply[RGBColor, 
+       Part[{{1., 1., 1., 1.}, {0.09411764705882353, 0.09411764705882353, 
+        0.09411764705882353, 1.}, {0.2901960784313726, 0.2901960784313726, 
+        0.2901960784313726, 1.}, {0.5176470588235295, 0.5176470588235295, 
+        0.5176470588235295, 1.}, {0.6470588235294118, 0.6470588235294118, 
+        0.6470588235294118, 1.}, {0.7098039215686275, 0.7098039215686275, 
+        0.7098039215686275, 1.}, {0.9058823529411765, 0.9058823529411765, 
+        0.9058823529411765, 1.}, {0., 0., 0., 1.}}, #]]& ),
+     ColorFunctionScaling->False],
+    Background->None,
+    ImageSize->{22, 29},
+    PlotRange->{{0, 22}, {0, 29}}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.5376816212703085`*^9, 3.5376890194917054`*^9, {3.537689065465335*^9, 
+   3.5376890851464605`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CountryData", "[", 
+  RowBox[{"\"\<Australia\>\"", ",", "\"\<ElectricalGridSocketImages\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.537681646482751*^9, 3.5376816514070325`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  GraphicsBox[RasterBox[CompressedData["
+1:eJyFUklORTEMe3Wc4QTsWHAljvAvwP13JOlAhYSI1OH5uanj9OP19fnC8zzv
+Od5yRIa4uc1w01hBDaxIxkEZJ2D/oHqhMwNIS65QVaVQEjkrFWJGCs2Z6dSh
+lVMtWVLMFkYzREyNOnq2ypIo57U25sKJOuKHm1Aihq1rq86bEtWrhnZFG5Vf
+qFXeUiGLXysaLa6OPoDhlQHrtvxErJ/svO0SmzxqW1qTU+ZEa07Xu6aqAn6p
+EMesLXdHMl2WDyXGWF2bZm205FSbV0Hp/OnTvLCd0FA3v51wd23K7Q98H/mr
+8zghB5X9yuqhdQ++ARj4EWQ=
+    "], {{0, 0}, {22, 29}},
+    ColorFunction->(Apply[RGBColor, 
+      Part[{{1., 1., 1., 1.}, {0.06274509803921569, 0.06274509803921569, 
+       0.06274509803921569, 1.}, {0.25882352941176473`, 0.25882352941176473`, 
+       0.25882352941176473`, 1.}, {0.4196078431372549, 0.4196078431372549, 
+       0.4196078431372549, 1.}, {0.5490196078431373, 0.5490196078431373, 
+       0.5490196078431373, 1.}, {0.7098039215686275, 0.7098039215686275, 
+       0.7098039215686275, 1.}, {0.7764705882352941, 0.7764705882352941, 
+       0.7764705882352941, 1.}, {0., 0., 0., 1.}}, #]]& ),
+    ColorFunctionScaling->False],
+   Background->None,
+   ImageSize->{22, 29},
+   PlotRange->{{0, 22}, {0, 29}}], "}"}]], "Output",
+ CellChangeTimes->{3.53768165241609*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CountryData", "[", 
+  RowBox[{"\"\<America\>\"", ",", "\"\<ElectricalGridSocketImages\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.5376816924883823`*^9, 3.5376816954255505`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  GraphicsBox[RasterBox[CompressedData["
+1:eJx9kdsNgCAMRaGF1gX035UcgQXc/88iKc9qCSG5uTk5oWe6rwTOuV3uITey
+MZECLBOIcVsGmTTNJU2ppl4maFcJkFPUbuVylzYueh9XrkCaw68Z9HUhvDah
+SGFBa3dOeUyp97UJ+gflGXw7M9P3oyu7wOnILuy9PXTRDRU=
+    "], {{0, 0}, {22, 21}},
+    ColorFunction->(Apply[RGBColor, 
+      Part[{{1., 1., 1., 1.}, {0.1607843137254902, 0.1607843137254902, 
+       0.1607843137254902, 1.}, {0.2901960784313726, 0.2901960784313726, 
+       0.2901960784313726, 1.}, {0.5490196078431373, 0.5490196078431373, 
+       0.5490196078431373, 1.}, {0.7098039215686275, 0.7098039215686275, 
+       0.7098039215686275, 1.}, {0.807843137254902, 0.807843137254902, 
+       0.807843137254902, 1.}, {0.8705882352941177, 0.8705882352941177, 
+       0.8705882352941177, 1.}, {0., 0., 0., 1.}}, #]]& ),
+    ColorFunctionScaling->False],
+   Background->None,
+   ImageSize->{22, 21},
+   PlotRange->{{0, 22}, {0, 21}}], "}"}]], "Output",
+ CellChangeTimes->{3.537681696243597*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CountryData", "[", 
+  RowBox[{"\"\<China\>\"", ",", "\"\<ElectricalGridSocketImages\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.5376817527758303`*^9, 3.537681755165967*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxtkd0Rg0AIhL1lgasg72kpJdhA+n8LcOpgRmYU/W6P3/f+/ezYtu11PG4P
+5oZZhvLHjy0KUEPDRgGoUYYLTetOaeGMT9V40ROX1mReJhY4aFyfzVQX7dIQ
+e9JJvVNlUqVMrIN0ElmDZgCOLGA5SYrUyihxuij6jNDjsiLIfzapLoyd0ldv
+vHWRmprDak4qkOk1SWZ1bjkFtvlKTHcMsyOxXbuQMJyxT9oNT7uMbf4AicMN
+og==
+     "], {{0, 0}, {22, 22}},
+     ColorFunction->(Apply[RGBColor, 
+       Part[{{1., 1., 1., 1.}, {0.03137254901960784, 0.03137254901960784, 
+        0.03137254901960784, 1.}, {0.25882352941176473`, 0.25882352941176473`,
+         0.25882352941176473`, 1.}, {0.38823529411764707`, 
+        0.38823529411764707`, 0.38823529411764707`, 1.}, {0.5176470588235295, 
+        0.5176470588235295, 0.5176470588235295, 1.}, {0.6784313725490196, 
+        0.6784313725490196, 0.6784313725490196, 1.}, {0.7411764705882353, 
+        0.7411764705882353, 0.7411764705882353, 1.}, {0., 0., 0., 1.}}, #]]& ),
+     ColorFunctionScaling->False],
+    Background->None,
+    ImageSize->{22, 22},
+    PlotRange->{{0, 22}, {0, 22}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJyFUklORTEMe3Wc4QTsWHAljvAvwP13JOlAhYSI1OH5uanj9OP19fnC8zzv
+Od5yRIa4uc1w01hBDaxIxkEZJ2D/oHqhMwNIS65QVaVQEjkrFWJGCs2Z6dSh
+lVMtWVLMFkYzREyNOnq2ypIo57U25sKJOuKHm1Aihq1rq86bEtWrhnZFG5Vf
+qFXeUiGLXysaLa6OPoDhlQHrtvxErJ/svO0SmzxqW1qTU+ZEa07Xu6aqAn6p
+EMesLXdHMl2WDyXGWF2bZm205FSbV0Hp/OnTvLCd0FA3v51wd23K7Q98H/mr
+8zghB5X9yuqhdQ++ARj4EWQ=
+     "], {{0, 0}, {22, 29}},
+     ColorFunction->(Apply[RGBColor, 
+       Part[{{1., 1., 1., 1.}, {0.06274509803921569, 0.06274509803921569, 
+        0.06274509803921569, 1.}, {0.25882352941176473`, 0.25882352941176473`,
+         0.25882352941176473`, 1.}, {0.4196078431372549, 0.4196078431372549, 
+        0.4196078431372549, 1.}, {0.5490196078431373, 0.5490196078431373, 
+        0.5490196078431373, 1.}, {0.7098039215686275, 0.7098039215686275, 
+        0.7098039215686275, 1.}, {0.7764705882352941, 0.7764705882352941, 
+        0.7764705882352941, 1.}, {0., 0., 0., 1.}}, #]]& ),
+     ColorFunctionScaling->False],
+    Background->None,
+    ImageSize->{22, 29},
+    PlotRange->{{0, 22}, {0, 29}}]}], "}"}]], "Output",
+ CellChangeTimes->{3.5376817559400115`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CountryData", "[", 
+  RowBox[{"\"\<Netherlands\>\"", ",", "\"\<ElectricalGridSocketImages\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.5376818861054564`*^9, 3.53768193827744*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  GraphicsBox[RasterBox[CompressedData["
+1:eJxtkd0Rg0AIhL1lgasg72kpJdhA+n8LcOpgRmYU/W6P3/f+/ezYtu11PG4P
+5oZZhvLHjy0KUEPDRgGoUYYLTetOaeGMT9V40ROX1mReJhY4aFyfzVQX7dIQ
+e9JJvVNlUqVMrIN0ElmDZgCOLGA5SYrUyihxuij6jNDjsiLIfzapLoyd0ldv
+vHWRmprDak4qkOk1SWZ1bjkFtvlKTHcMsyOxXbuQMJyxT9oNT7uMbf4AicMN
+og==
+    "], {{0, 0}, {22, 22}},
+    ColorFunction->(Apply[RGBColor, 
+      Part[{{1., 1., 1., 1.}, {0.03137254901960784, 0.03137254901960784, 
+       0.03137254901960784, 1.}, {0.25882352941176473`, 0.25882352941176473`, 
+       0.25882352941176473`, 1.}, {0.38823529411764707`, 0.38823529411764707`,
+        0.38823529411764707`, 1.}, {0.5176470588235295, 0.5176470588235295, 
+       0.5176470588235295, 1.}, {0.6784313725490196, 0.6784313725490196, 
+       0.6784313725490196, 1.}, {0.7411764705882353, 0.7411764705882353, 
+       0.7411764705882353, 1.}, {0., 0., 0., 1.}}, #]]& ),
+    ColorFunctionScaling->False],
+   Background->None,
+   ImageSize->{22, 22},
+   PlotRange->{{0, 22}, {0, 22}}], "}"}]], "Output",
+ CellChangeTimes->{3.5376819391754923`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GraphPlot", "[", 
+  RowBox[{
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Thread", "[", 
+       RowBox[{"#", "\[Rule]", 
+        RowBox[{"CountryData", "[", 
+         RowBox[{"#", ",", "\"\<ImportPartners\>\""}], "]"}]}], "]"}], "&"}], 
+     "/@", 
+     RowBox[{"CountryData", "[", "\"\<SouthAmerica\>\"", "]"}]}], "]"}], ",", 
+   RowBox[{"VertexLabeling", "\[Rule]", "True"}], ",", 
+   RowBox[{"DirectedEdges", "\[Rule]", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5376868815954247`*^9, 3.53768690616683*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[GraphicsComplexBox[CompressedData["
+1:eJw1VAlUjVsUvn9K/5/u7dwb8TKsUuiJVy+hKP+nyFBCvEglRKpLpSiaEM0T
+GZK6t0LJkCEZky6iXoMhTaQMTypehLhpuu9/a7131jrrrL3Ot7999tn727ob
+fB02KfF4PGdu/3ta3W8PVn1JEC5YGXAkcJC1P7o8c+9qgpyMg/oZ05Twwo15
+fvAjjbpPrxsChiqhZ5JpicerYSjuNC4s6qcwIhG6K9cOR0TDDlUN8x72zLtA
+xdk3fBg8XbzL8nAPK/vAfq9x5cOsUjk98MIAm2d42q+1WIAQO8lYyXtlkAe9
+LMlSxwaHRs9HPgwyI51vPx4tRPqF3s05znx07yk7d3uhEGNLZVo359G4EV2r
+xmxXxiP3lEPmM/iYa+8YMqVIDf6mo5OmVw9FVgDjF/apjzXseqynPV7ODv5Q
+rdx89zvrbSY1/gOtrONsuxCbpi62sExueXHUIPugZM09H81uNtp7Yd1AIgPj
+3jLnOcpNrEiatsaiiMDWob9o6wg5y8ydN/qkpxJ4/639GiGp7dvU0R53y3eF
+SAktnt47UuUcT9VkbHsxwP6PG6s+ITFWShAz8vokueFPdshWSu/8Ogr6Rp83
+V3kr45rqIceBUBHo1VXN6/6ikJVskiuZNQprpCWRmjMpvMk2kkUljkBJfWcf
+Oa0BzXkpSwpKCW5rqUWeUlGwOp7SDskdjj85UnfDFAXrQ2XOenODYNNe/T3f
+VijYGfdV+eFXCG7FTTe3C1WwtdcthIEXCPLso3PdchSs02W1poozBPHn3dp0
+HivYB5cM3oTlEGxcHvku4qeCPSm+F3ogm+CQ0dTJFiIeNGQO8d1buHhSxyIX
+KwrWXhnyzV4EZq/O+2mvpvC5xXe5pQeBl12Ew3AfCiEu347ucCeQ1aqHWe+n
+cKVq0WnheoKEpuq+rOMU+mvtrERuBJY+ssoJlynEXlxG73QlkKomNFeUUdjW
+9mWXtQvBWuOikbEtFMJH5FXV+xJEH7uWPvxv7v5LuvHHHQS6L3dWX22koLc6
+/dXpEIJp7r+O6yyl4HzUhD9sL/felqy7sksUirMHaM0ogoP9crWZGRTM8ozY
+O3EEmdXx3o7RFKryhObDkjn/vh7xBH8KnzqDJD0pBA7bBYVnXShEpLUlHS4j
+cFVpHR83hQf7Lsl43UqC/NKkrVVaPJwIrii3fUQQuupmfA2PB60Bm32aTwkW
+SV3v2dQp2JaELv+gZwQFB5pK4/MU7JH9nQ2BdQTLxD/0I0IULH22QyhsIEg0
+c6PM7Ln6+i/Mmt9IwG/jJRbpKNiNIuareB4f9tWm7guCGKRM/X4hyI+PM97J
+PQ93MihhLbtiMzj9haWWF3G2dn/xu8PlnE46HtVP4PCdPZLiuG4+4hKDT6hs
+5/zbswtcdQSY4RI80cWXgX1J+FCenQC9V3obJ3sxsBQbDNsYJMBEoeJswHoG
+Rnnhlr1iglNzkrtmfqDxamXP4ijuf7W8HJcMvKaRnz37ROtRgt6lx36xqqfh
+9/ZLsvA8gd4TSQFTQSO8+K3fkLsEjfkmnatu09B9TxcWcvkXavkP/z2fxsrx
+2S/HfSBQUfdpT8ugkf3DZP/sQYLLugUZqXE0bNfIapJ+cPVZtHEMLGhctVvc
+HfOa4zvHRMtm0ZBa5z7bXUHglEZdr+Rsv9ZNTsGFBJhakbeew6u2fd+ym9Oj
+PGZc816WhunngK9HYjid3xrnZMjNl/p9keWl/lx/bZDmuizm8ss3fiji+tFZ
+5XitpgON9MCEMUecBGhuYJKX/knDYmwaFfabAOJ8K5O4GhqZ+0Qr7gwRIPoh
+z2N+Mw1tpdwgj+d8rLXpqwrroDFoW3o14iJXL0+PFCM5jZu9QUY6UXxUKyaK
+HYcycIhY0GLLzctQNcPUTi0GN5/rJYum8/Gk+/3bzwYM/gFc5XAN
+    "], {
+     {RGBColor[0.5, 0., 0.], Arrowheads[{{0.02107254536381817, 0.7}}], 
+      ArrowBox[{1, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42,
+        43, 2}], ArrowBox[{1, 3}], ArrowBox[{1, 4}], ArrowBox[{1, 5}], 
+      ArrowBox[{2, 3}], ArrowBox[{2, 4}], 
+      ArrowBox[{2, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58,
+        59, 1}], ArrowBox[{2, 5}], ArrowBox[{6, 2}], ArrowBox[{6, 1}], 
+      ArrowBox[{6, 7}], ArrowBox[{6, 3}], ArrowBox[{6, 8}], ArrowBox[{7, 3}], 
+      ArrowBox[{7, 4}], ArrowBox[{7, 2}], ArrowBox[{7, 1}], ArrowBox[{8, 3}], 
+      ArrowBox[{8, 4}], ArrowBox[{8, 2}], ArrowBox[{8, 13}], ArrowBox[{8, 9}],
+       ArrowBox[{8, 1}], ArrowBox[{8, 7}], ArrowBox[{8, 10}], 
+      ArrowBox[{9, 3}], ArrowBox[{9, 2}], ArrowBox[{9, 10}], ArrowBox[{9, 4}],
+       ArrowBox[{9, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 
+       74, 75, 11}], ArrowBox[{9, 12}], ArrowBox[{11, 3}], 
+      ArrowBox[{11, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 
+       90, 91, 9}], ArrowBox[{11, 2}], ArrowBox[{11, 4}], ArrowBox[{11, 10}], 
+      ArrowBox[{11, 27}], ArrowBox[{13, 3}], ArrowBox[{13, 9}], 
+      ArrowBox[{13, 2}], ArrowBox[{13, 4}], ArrowBox[{14, 15}], 
+      ArrowBox[{14, 3}], ArrowBox[{14, 16}], ArrowBox[{17, 18}], 
+      ArrowBox[{17, 3}], ArrowBox[{17, 19}], ArrowBox[{17, 20}], 
+      ArrowBox[{21, 19}], ArrowBox[{21, 3}], ArrowBox[{21, 4}], 
+      ArrowBox[{21, 22}], ArrowBox[{21, 15}], ArrowBox[{23, 2}], 
+      ArrowBox[{23, 3}], ArrowBox[{23, 1}], ArrowBox[{23, 4}], 
+      ArrowBox[{24, 3}], ArrowBox[{24, 16}], ArrowBox[{24, 19}], 
+      ArrowBox[{24, 4}], ArrowBox[{24, 12}], ArrowBox[{25, 1}], 
+      ArrowBox[{25, 2}], ArrowBox[{25, 3}], ArrowBox[{25, 4}], 
+      ArrowBox[{25, 23}], ArrowBox[{25, 11}], ArrowBox[{25, 26}]}, {InsetBox[
+       FrameBox["\<\"Argentina\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 1], InsetBox[
+       FrameBox["\<\"Brazil\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 2], InsetBox[
+       FrameBox["\<\"UnitedStates\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 3], InsetBox[
+       FrameBox["\<\"China\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 4], InsetBox[
+       FrameBox["\<\"Germany\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 5], InsetBox[
+       FrameBox["\<\"Bolivia\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 6], InsetBox[
+       FrameBox["\<\"Chile\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 7], InsetBox[
+       FrameBox["\<\"Peru\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 8], InsetBox[
+       FrameBox["\<\"Colombia\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 9], InsetBox[
+       FrameBox["\<\"Mexico\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 10], InsetBox[
+       FrameBox["\<\"Venezuela\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 11], InsetBox[
+       FrameBox["\<\"Japan\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 12], InsetBox[
+       FrameBox["\<\"Ecuador\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 13], InsetBox[
+       FrameBox["\<\"FalklandIslands\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 14], InsetBox[
+       FrameBox["\<\"UnitedKingdom\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 15], InsetBox[
+       FrameBox["\<\"Netherlands\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 16], InsetBox[
+       FrameBox["\<\"FrenchGuiana\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 17], InsetBox[
+       FrameBox["\<\"France\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 18], InsetBox[
+       FrameBox["\<\"TrinidadTobago\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 19], InsetBox[
+       FrameBox["\<\"Italy\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 20], InsetBox[
+       FrameBox["\<\"Guyana\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 21], InsetBox[
+       FrameBox["\<\"Cuba\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 22], InsetBox[
+       FrameBox["\<\"Paraguay\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 23], InsetBox[
+       FrameBox["\<\"Suriname\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 24], InsetBox[
+       FrameBox["\<\"Uruguay\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 25], InsetBox[
+       FrameBox["\<\"Nigeria\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 26], InsetBox[
+       FrameBox["\<\"Panama\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 27]}}],
+   Annotation[#, VertexCoordinateRules -> CompressedData["
+1:eJwBwQE+/iFib1JlAgAAABsAAAACAAAAQsPoegfcEEB+DlRzlXb+P06WUZ+B
+WBBApZyRJJwzAkDaXwnZkesIQNXu4NdzBgJA+Cc0v2bfC0C97TC0u/wBQBWN
+QCFUXhRAgtd1Bw85+D+p5Hb/quENQCjRSnk9lPg/wOo/9dJdDUA4ywSbdq79
+P6grp3DlvQ5Ae0ydHZ3mBEAQxfo/EKAMQGJS2GjObglAn4VbvM8bEUCbrvpn
+pVsNQPSAx6u8SBFAHcTAFrlECEC4h9QKCXQEQM5jkpM5Ng1AQU5Weyy7CkBy
+NBuONc0GQKBzCXB97vs/K/DPIxoi9z/+9gfLZ8H1P2o4njBVQOU/VjtMe0bb
+8D+0x/c9rxj+P8W/WsJuE/Q/h2pI1f2NCUAw+sdbPgTbPxKemVo8uxBAS1L8
+u20V9z8JQUQbo2gCQAAAAAAAAAAAhA97l+hxDEDoirpvUxICQN5oanWX9/Q/
+h8wqQHHa/T8AAAAAAAAAAB0MJY2JnhBAiBe3J/cr+T8DbQEjrGABQCQv72fM
+agRAtgeTVv18EkAIWMzdYOMBQKCPMqadOhhAWp6/hRM3AUDhoS/Aho0VQL/W
+7fsQpw9AOhi6Tw==
+     "]]& ],
+  AspectRatio->Automatic,
+  FrameTicks->None,
+  PlotRange->All,
+  PlotRangePadding->Scaled[0.1]]], "Output",
+ CellChangeTimes->{{3.5376868622863207`*^9, 3.5376869070078783`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CountryData", "[", "\"\<SouthAmerica\>\"", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Argentina\"\>", ",", "\<\"Bolivia\"\>", ",", "\<\"Brazil\"\>", 
+   ",", "\<\"Chile\"\>", ",", "\<\"Colombia\"\>", ",", "\<\"Ecuador\"\>", 
+   ",", "\<\"FalklandIslands\"\>", ",", "\<\"FrenchGuiana\"\>", 
+   ",", "\<\"Guyana\"\>", ",", "\<\"Paraguay\"\>", ",", "\<\"Peru\"\>", 
+   ",", "\<\"Suriname\"\>", ",", "\<\"Uruguay\"\>", 
+   ",", "\<\"Venezuela\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.5376869161374006`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Graphics", "[", 
+   RowBox[{"{", 
+    RowBox[{"LightGray", ",", 
+     RowBox[{"CountryData", "[", 
+      RowBox[{"\"\<Australia\>\"", ",", "\"\<Polygon\>\""}], "]"}], ",", 
+     "Red", ",", 
+     RowBox[{"PointSize", "[", ".01", "]"}], ",", 
+     RowBox[{"Select", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"Point", "[", 
+          RowBox[{"Reverse", "[", 
+           RowBox[{"CityData", "[", 
+            RowBox[{"#", ",", "\"\<Coordinates\>\""}], "]"}], "]"}], "]"}], 
+         "&"}], "/@", 
+        RowBox[{"CityData", "[", 
+         RowBox[{"{", 
+          RowBox[{"All", ",", "\"\<Australia\>\""}], "}"}], "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"FreeQ", "[", 
+         RowBox[{"#", ",", "_Missing"}], "]"}], "&"}]}], "]"}]}], "}"}], 
+   "]"}], ";"}]], "Input",
+ CellChangeTimes->{3.5376887608109093`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"CountryData", "[", 
+     RowBox[{"#", ",", "\"\<ElectricalGridSocketImages\>\""}], "]"}], "&"}], "/@", 
+   RowBox[{"CountryData", "[", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.5376883296682496`*^9, 3.5376883356835938`*^9}, {
+   3.537688397871151*^9, 3.537688439210515*^9}, {3.5376887133091927`*^9, 
+   3.537688738658643*^9}, 3.5377467822159877`*^9, 3.5377468287386484`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CountryData", "[", "]"}], ";"}]], "Input",
+ CellChangeTimes->{3.537688371543645*^9, 3.5377467976468697`*^9, 
+  3.5377468315228076`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Graphics", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"Inset", "[", 
+       RowBox[{
+        RowBox[{"CountryData", "[", 
+         RowBox[{"#", ",", "\"\<ElectricalGridSocketImages\>\""}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Log", "[", 
+           RowBox[{"10", ",", 
+            RowBox[{"CountryData", "[", 
+             RowBox[{"#", ",", "\"\<Population\>\""}], "]"}]}], "]"}], ",", 
+          RowBox[{"Log", "[", 
+           RowBox[{"10", ",", 
+            RowBox[{"CountryData", "[", 
+             RowBox[{"#", ",", "\"\<GDP\>\""}], "]"}]}], "]"}]}], "}"}], ",", 
+        "Center", ",", "0.2"}], "]"}], "&"}], "/@", 
+     RowBox[{"DeleteCases", "[", 
+      RowBox[{
+       RowBox[{"CountryData", "[", "\"\<UN\>\"", "]"}], ",", 
+       "\"\<VaticanCity\>\""}], "]"}]}], ",", 
+    RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+    RowBox[{"PlotRangePadding", "\[Rule]", ".2"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{3.537688620020857*^9, 3.5376888200883*^9}],
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"MapIndexed", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"ColorData", "[", "3", "]"}], "[", 
+        RowBox[{"First", "[", "#2", "]"}], "]"}], ",", 
+       RowBox[{"CountryData", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<SchematicPolygon\>\"", ",", "\"\<LambertAzimuthal\>\""}], 
+          "}"}]}], "]"}]}], "}"}], "&"}], ",", 
+    RowBox[{"CountryData", "[", "]"}]}], "]"}], "]"}]], "Input"]
+}, Open  ]]
+},
+WindowSize->{1264, 665},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 88, 1, 49, "Subtitle"],
+Cell[CellGroupData[{
+Cell[680, 27, 306, 6, 31, InheritFromParent],
+Cell[989, 35, 2235, 43, 46, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3261, 83, 207, 4, 31, "Input"],
+Cell[3471, 89, 1149, 22, 46, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4657, 116, 207, 4, 31, "Input"],
+Cell[4867, 122, 979, 19, 38, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5883, 146, 203, 4, 31, "Input"],
+Cell[6089, 152, 2186, 42, 46, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8312, 199, 208, 4, 31, "Input"],
+Cell[8523, 205, 1077, 21, 39, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9637, 231, 567, 14, 31, "Input"],
+Cell[10207, 247, 9297, 187, 264, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19541, 439, 83, 1, 31, "Input"],
+Cell[19627, 442, 466, 8, 30, "Output"]
+}, Open  ]],
+Cell[20108, 453, 881, 25, 52, "Input"],
+Cell[20992, 480, 440, 9, 31, "Input"],
+Cell[21435, 491, 170, 4, 31, "Input"],
+Cell[21608, 497, 1052, 27, 52, "Input"],
+Cell[22663, 526, 545, 16, 31, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

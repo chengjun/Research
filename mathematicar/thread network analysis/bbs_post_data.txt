@@ -1,0 +1,60 @@
+CC = Import["D://Mathematica//bbs.xls"]
+DD = CC[[1]]
+Tally[Transpose[DD][[4]]] // MatrixForm
+ListLogLogPlot[Sort[Transpose[Tally[Transpose[DD][[4]]]][[2]], Greater]]
+tt = Union[Transpose[DD][[1]]];
+First[CC] // TableForm;
+thread[n_] := Select[DD, #[[1]] == n &]
+
+k = thread[2]
+First[k][[3]]
+
+Transpose[Drop[k, 1]][[3]]
+
+Rule[#, First[k][[3]]] & /@ Transpose[Drop[k, 1]][[3]]
+
+net[m_] := Module[{thread},
+  thread = Select[DD, #[[1]] == m &];
+  If[Length[thread] > 1,
+   Rule[#, First[thread][[3]]] & /@ Transpose[Drop[thread, 1]][[3]], 0]
+  ]
+
+
+bbs = Select[Sort[Flatten[net[#] & /@ tt]], Length[#] > 1 &]
+Tally[bbs]
+
+fre = Sort[Transpose[Tally[bbs]][[2]], Greater]
+ListLogLogPlot[fre, PlotRange -> All]
+
+GraphPlot[bbs, SelfLoopStyle -> None, ImageSize -> 1000,
+ EdgeRenderingFunction -> ({Red, Text[#3], Arrowheads[{-.01, .01}], 
+     Arrow[#1, 0.01]} &),
+ VertexRenderingFunction -> ({Blue, Text[Style[#2, 20, Bold], #1]} &)]
+
+GraphPlot[Tally[bbs], ImageSize -> 1000, SelfLoopStyle -> None, 
+ VertexLabeling -> True,
+ EdgeRenderingFunction -> ({Red, Text[#3, Mean[#1]], 
+     Arrowheads[{-.01, .01}], Arrow[#1, 0.01]} &),
+ VertexRenderingFunction -> ({Blue, Text[Style[#2, 20, Bold], #1]} &)
+ ]
+
+
+
+GraphPlot[Tally[bbs], ImageSize -> 1000, SelfLoopStyle -> None, 
+ VertexLabeling -> True,
+ EdgeRenderingFunction -> ({Red, Arrowheads[{-.01, .01}], 
+     Arrow[#1, 0.01]} &),
+ VertexRenderingFunction -> ({Blue, Text[Style[#2, 20, Bold], #1]} &)
+ ]
+
+GraphPlot[Tally[bbs], VertexLabeling -> True, ImageSize -> 1000,
+ EdgeRenderingFunction -> ({Red, Text[#3, Mean[#1]], 
+     Arrowheads[{-.01, .01}], Arrow[#1, 0.1], Thickness[2]} &),
+ VertexRenderingFunction -> ({White, EdgeForm[Black], Blue, 
+     Text[Style[#2, 20, Bold], #1]} &)]
+
+GraphPlot[bbs, VertexLabeling -> True, ImageSize -> 1000,
+ EdgeRenderingFunction -> ({Red, Arrowheads[{-.01, .01}], 
+     Arrow[#1, 0.1], Thickness[2]} &),
+ VertexRenderingFunction -> ({White, EdgeForm[Black], Blue, 
+     Text[Style[#2, 20, Bold], #1]} &)]
