@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>SIMILE Timeline Visualization</title>
+    <script src="http://api.simile-widgets.org/timeline/2.3.1/timeline-api.js?bundle=true" type="text/javascript"></script>
+
+    <script>
+
+        var jsonTimeline = %s; //substituted by Python from mailboxes__participants_in_conversations_adapted_for_simile.py
+
+        function onLoad() {
+            var eventSource = new Timeline.DefaultEventSource(0);
+            var theme = Timeline.ClassicTheme.create();
+            theme.event.bubble.width = 350;
+            theme.event.bubble.height = 300;
+
+            //XXX: could detect and dynamically set orientation of timeline
+            var d = Timeline.DateTime.parseGregorianDateTime("2002") 
+            var bandInfos = [
+                Timeline.createBandInfo({
+                    width:          "70%", 
+                    intervalUnit:   Timeline.DateTime.DAY, 
+                    intervalPixels: 100,
+                    eventSource : eventSource,
+                    date : d
+                }),
+                Timeline.createBandInfo({
+                     width:          "30%", 
+                     intervalUnit:   Timeline.DateTime.MONTH, 
+                     intervalPixels: 600,
+                     eventSource : eventSource,
+                     date : d,
+                     overview : true
+                 })
+            ];
+            bandInfos[1].syncWith = 0;
+            bandInfos[1].highlight = true; 
+
+            var tl = Timeline.create(document.getElementById("tl"), bandInfos);
+            eventSource.loadJSON(jsonTimeline, document.location.href);
+        }
+    </script>
+</head>
+<body onload="onLoad();">
+    <div id="body">
+        <div id="tl" class="timeline-default" style="height: 600px;">
+    </div>
+</body>
+</html>

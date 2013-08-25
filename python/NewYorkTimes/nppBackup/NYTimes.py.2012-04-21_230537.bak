@@ -1,0 +1,16 @@
+# Scraping New York Times using python
+# 20120421
+# chengjun wang
+
+
+import json
+url='http://api.nytimes.com/svc/search/v1/article?format=json&query=occupy+wall+street&begin_date=20110901&end_date=20111030&fields=body%2Curl%2Ctitle%2Cdate%2Cdes_facet%2Cdesk_facet%2Cbyline&offset=1&api-key=c2c5b91680757ac93bff8d85881650fb:14:62811165'
+
+
+
+# req_url = 'http://api.flickr.com/services/rest/?method=flickr.photos.getInfo&format=json&api_key=48c43806d797c273b9c65c8e7bb29649&photo_id=2357271011'
+# jstr = urllib2.urlopen(req_url).read()
+# """ these are flickr-specific ""
+# jstr = jstr.replace('jsonFlickrApi', '')
+# jstr = jstr.strip('()')
+# jinfo = json.loads( jstr )

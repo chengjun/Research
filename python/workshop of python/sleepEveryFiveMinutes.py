@@ -1,0 +1,33 @@
+# !/usr/bin/env python
+# -*- coding: UTF-8  -*-
+# GetSina Weibo Repost_timeline
+# Author: chengjun wang
+# 20120328@Canberra
+import time
+
+
+
+while True:
+    end_time = time.time() + 1  # every five minutes stop once
+    while time.time() < end_time: 
+        print 'working'
+        for id in range(1,10000):
+            print id
+                       
+            
+# elif time.time() >= end_time: 
+    # print 'sleep'
+    # time.sleep(5)
+        
+        
+# import sched, time
+# s = sched.scheduler(time.time, time.sleep)
+# def do_something(sc): 
+    # for id in range(1, 10000000):
+        # print id  # do your stuff
+    # sc.enter(5, 1, do_something, (sc,))
+
+# s.enter(3, 1, do_something, (s,))
+# s.run()        
+        
+        

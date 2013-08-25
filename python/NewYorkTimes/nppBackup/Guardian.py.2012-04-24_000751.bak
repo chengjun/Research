@@ -1,0 +1,58 @@
+# !/usr/bin/env python
+# -*- coding: UTF-8  -*-
+# Scraping The Guardian using Python
+# 20120421@ Canberra
+# chengjun wang
+
+
+import json
+import urllib2
+
+'''
+ http://content.guardianapis.com/search?q=occupy+wall+street&from-date=2011-09-01&to-date=2012-02-14&page=2
+ &page-size=3&format=json&show-fields=all&use-date=newspaper-edition&api-key=mudfuj8durd693pwm3g33gzq
+'''
+
+'''step 1: input query information'''
+apiUrl='http://content.guardianapis.com/search?q=occupy+wall+street' # set the query word here
+apiDate='from-date=2011-09-01&to-date=2012-02-14'                     # set the date here
+apiPage='page=2'                           # set the page
+apiPage-size='page-size=3'                # set the number of articles in one page
+fields='format=json&show-fields=all&use-date=newspaper-edition'
+key='api-key=mudfuj8durd693pwm3g33gzq'  # input your key here
+
+'''step 2: get the number of offset/pages'''
+link=[apiUrl, apiDate, apiPage, apiPage-size, fields, key]
+ReqUrl='&'.join(link)
+jstr = urllib2.urlopen(ReqUrl).read()  # t = jstr.strip('()')
+ts = json.loads( jstr )
+# number=ts['total'] #  the number of queries  # query=ts['tokens'] # result=ts['results']
+# print number
+# seq=range(number/9)  # this is not a good way
+# print seq
+
+# '''step 3: crawl the data and dump into csv'''
+# import csv
+# addressForSavingData= "D:/Research/Dropbox/tweets/wapor_assessing online opinion/News coverage of ows/nyt.csv"    
+# file = open(addressForSavingData,'wb') # save to csv file
+# for i in seq:
+    # nums=str(i)
+    # offsets=''.join(['offset=', nums]) # I made error here, and print is a good way to test
+    # links=[apiUrl, query, apiDate, fields, offsets, key]
+    # ReqUrls='&'.join(links)
+    # print "*_____________*", ReqUrls
+    # jstrs = urllib2.urlopen(ReqUrls).read()
+    # t = jstrs.strip('()')
+    # tss= json.loads( t )  # error no joson object
+    # result = tss['results']
+    # for ob in result:
+        # title=ob['title']  # body=ob['body']   # body,url,title,date,des_facet,desk_facet,byline
+        # print title
+        # url=ob['url']
+        # date=ob['date'] # desk_facet=ob['desk_facet']  # byline=ob['byline'] # some author names don't exist
+        # w = csv.writer(file,delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        # w.writerow((date, title, url)) # write it out		
+# file.close()
+# pass
+
+

@@ -1,0 +1,11 @@
+# DFS (depth-first serach)
+# chengjun @ xifu, fengxiang, baoji 20120803
+
+import networkx.generators.small
+
+g = networkx.generators.small.krackhardt_kite_graph()
+g.number_of_edges()
+g.number_of_nodes()
+g.adjacency_list()
+
+dict((x, g.neighbors(x)) for x in g.nodes())

@@ -1,0 +1,11 @@
+# !/usr/bin/env python
+# -*- coding: UTF-8  -*-
+# GetSina Weibo Repost_timeline
+# Author: chengjun wang
+# 20120328@Canberra
+
+while True:
+    end_time = time.time() + 10  # every five minutes stop once
+    while time.time() > end_time: 
+        time.sleep(60)
+        print 'working'

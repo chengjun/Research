@@ -1,0 +1,10 @@
+# A recursive generator that generates Tree leaves in in-order.
+def inorder(t):
+    if t:
+        for x in inorder(t.left):
+            yield x
+
+        yield t.label
+
+        for x in inorder(t.right):
+            yield x

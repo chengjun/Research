@@ -1,0 +1,15 @@
+127.0.0.1 - - [29/Mar/2010:00:48:05 +0000] "GET /a HTTP/1.1" 200
+65383 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1;
+.NET CLR 1.1.4322)"
+127.0.0.1 - - [29/Mar/2010:00:48:05 +0000] "GET /b HTTP/1.1" 200
+22912 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1;
+.NET CLR 1.1.4322)"
+127.0.0.1 - - [29/Mar/2010:00:48:05 +0000] "GET /c HTTP/1.1" 200
+1818212 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;
+SV1; .NET CLR 1.1.4322)"
+127.0.0.1 - - [29/Mar/2010:00:48:05 +0000] "GET /d HTTP/1.1" 200
+888 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1;
+.NET CLR 1.1.4322)"
+127.0.0.1 - - [29/Mar/2010:00:48:05 +0000] "GET /e HTTP/1.1" 200
+38182121 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;
+SV1; .NET CLR 1.1.4322)"

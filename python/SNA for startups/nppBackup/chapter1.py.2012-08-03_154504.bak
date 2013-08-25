@@ -1,0 +1,34 @@
+# DFS (depth-first serach)
+# chengjun @ xifu, fengxiang, baoji 20120803
+
+import networkx.generators.small
+
+g = networkx.generators.small.krackhardt_kite_graph()
+print g.number_of_edges()
+print g.number_of_nodes()
+print g.adjacency_list()
+
+print dict((x, g.neighbors(x)) for x in g.nodes())
+
+def DFS_nodes(graph, node, visited=[]):
+    visited.append(node)
+    for neighbor in graph[node]:
+        if not neighbor in visited:
+            DFS_nodes(graph, neighbor, visited)
+    return visited
+
+
+    
+print DFS_nodes(g, 0)
+    
+def DFS_edges(graph, node, visited=[], edges=[]):
+    visited.append(node)
+    for ni in graph[node]:
+        if not ni in visited:
+            edges.append((node, ni))
+            DFS_edges(graph, ni, visited, edges)
+    return edges    
+print DFS_edges(g, 0)
+    
+
+    

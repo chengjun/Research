@@ -1,0 +1,55 @@
+# Scraping New York Times using python
+# 20120421
+# chengjun wang
+
+
+import json
+import urllib2
+
+'''
+reqUrl='http://api.nytimes.com/svc/search/v1/article?format=json&query=occupy+wall+street&begin_date=
+20110901&end_date=20111030&fields=body%2Curl%2Ctitle%2Cdate%2Cdes_facet%2Cdesk_facet%2Cbyline&offset=0
+&api-key=c2c5b91680757ac93bff8d85881650fb:14:62811165'
+'''
+
+url='http://api.nytimes.com/svc/search/v1/article?format=json'
+query='query=occupy+wall+street'
+date='begin_date=20110901&end_date=20111030'
+fields='fields=body%2Curl%2Ctitle%2Cdate%2Cdes_facet%2Cdesk_facet%2Cbyline'
+offset='offset='
+num='0'
+key='api-key=c2c5b91680757ac93bff8d85881650fb:14:62811165'
+
+link=[url, query, date, fields, offset, num, key]
+ReqUrl='&'.join(link)
+
+jstr = urllib2.urlopen(ReqUrl).read()
+
+'''these are nytimes-specific '''
+t = jstr.strip('()')
+ts = json.loads( jstr )
+number=ts['total'] #  the number of queries  # query=ts['tokens'] # result=ts['results']
+print number
+seq=range(number/9)
+print seq
+
+import csv
+addressForSavingData= "D:/Research/Dropbox/tweets/wapor_assessing online opinion/News coverage of ows/nyt.csv"    
+file = open(addressForSavingData,'wb') # save to csv file
+for i in seq:
+    num=str(seq[i])
+    link=[url, query, date, fields, offset, num, key]
+    jstr = urllib2.urlopen(ReqUrl).read()
+    t = jstr.strip('()')
+    ts = json.loads( jstr )
+    result=ts['results']
+    for ob in result:
+        title=ob['title'] body=ob['body']   # body,url,title,date,des_facet,desk_facet,byline
+        url=ob['url']
+        date=ob['date'] # desk_facet=ob['desk_facet']  # byline=ob['byline'] # some author names don't exist
+        w = csv.writer(file,delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        w.writerow((date, title, url)) # write it out		
+file.close()
+pass
+
+
