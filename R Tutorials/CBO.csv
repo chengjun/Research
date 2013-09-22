@@ -1,0 +1,32 @@
+"affix","(e)ry","(i)an","age","ary (a)","ary (n)","dom","ee","en","er","ess","ette","fold","ful (a)","ful(n)","hood","ish","ism","ist","ive","less","ling","lyN","lyA","ment","ness","or","ous","ship","ster","th","wise"
+"(e)ry","-",,,,,"yes",,,,,,,,,,,"yes","yes",,,,,,,,,"yes","yes",,,
+"(i)an","yes","-","yes","yes",,"yes",,,"yes","yes",,,,,"yes","yes","yes","yes",,"yes",,"yes",,,"yes",,"yes","yes",,,"yes"
+"age","yes",,"-",,,"yes",,,,,,,,"yes","yes",,,,,"yes",,,,,"yes",,"yes","yes",,,"yes"
+"ary (a)",,,,"-",,,,,,,,,,,,,"yes","yes",,,,,"yes","yes","yes",,,,,,
+"ary (n)","yes","yes",,,"-",,,,,,,,,,,,"yes","yes",,"yes",,,,,,,"yes","yes",,,"yes"
+"dom",,,,,,"-",,,,,,,,"yes",,,,,,"yes",,,,,,,,,,,
+"ee",,,,,,,"-",,,"yes",,,,,"yes",,"yes",,,,,,,,,,,"yes",,,
+"en",,,,,,,"yes","-","yes",,,,,,,,,,,,,,,"yes",,,,,,,
+"er",,,"yes",,,"yes",,,"-","yes","yes",,,"yes","yes","yes","yes","yes",,"yes","yes","yes",,,,,,"yes",,,"yes"
+"ess",,,,,,"yes",,,,"-",,,,,"yes",,,,,"yes",,"yes",,,,,,"yes",,,"yes"
+"ette",,,"yes",,,,,,,,"-",,,,,"yes","yes","yes",,,,,,,,,,,,,
+"fold",,,,,,,,,,,,"-",,,,,,,,,,,,,"yes",,,,,,"yes"
+"ful (adj)",,,,,,,,,,,,,"-",,,,,,,,,,"yes",,"yes",,,,,,"yes"
+"ful (n)",,,,,,,,,,,,,,"-",,,,,,,,,,,,,,,,,
+"hood",,,,,,,,,,,,,,,"-",,,,,"yes",,,,,,,,,,,
+"ish","yes","yes",,,,,,,,,,,,,,"-","yes","yes",,,,,"yes","yes","yes",,,,,,"yes"
+"ism",,,,,,,,,,,,,,,,,"-",,,,,,,,,,,,,,
+"ist","yes",,,,"yes","yes",,,"yes","yes",,,,,,,,"-",,,,"yes",,,,,,"yes",,,
+"ive",,,,,,,,,,,,,,,,,"yes","yes","-",,,,"yes",,"yes",,,,,,
+"less",,,,,,,,,,,,,,,,,,,,"-",,,"yes",,"yes",,,,,,"yes"
+"ling",,,,,,,,,,,,,,,"yes",,,,,"yes","-",,,,,,,"yes",,,"yes"
+"lyN",,,,,,,,,,,,,,,"yes","yes","yes",,,,,"-",,,"yes",,,,,,"yes"
+"lyA",,,,,,,,,,,,,,,,,,,,,,,"-",,,,,,,,
+"ment","yes",,,"yes","yes",,"yes",,"yes",,,,,,,,"yes","yes",,,,,,"-",,,"yes",,,,"yes"
+"ness",,,,,,,,,,,,,,,,,,,,,,,,,"-",,,,,,"yes"
+"or",,"yes","yes",,,"yes",,,,"yes","yes",,,"yes","yes","yes","yes","yes",,"yes","yes","yes",,,,"-","yes","yes",,,"yes"
+"ous",,,,,,,,,,,,,,,,,,,,,,,"yes",,"yes",,"-",,,,
+"ship",,,,,,,,,,,,,"yes",,,,,,,"yes",,,,"yes",,,,"-",,,
+"ster",,"yes","yes",,,"yes",,,,,"yes",,,,"yes","yes","yes",,,,,"yes",,,,,"yes","yes","-",,
+"th",,"yes",,,,,,"yes",,,,,"yes",,,,,,,"yes",,,,,,,,,,"-","yes"
+"wise",,,,,,,,,,,,,,,,,,,,,,,,,"yes",,,,,,"-"
