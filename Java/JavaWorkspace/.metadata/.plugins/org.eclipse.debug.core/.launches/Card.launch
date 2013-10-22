@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/think_java_chapter13_card_game/src/think_java_chapter13_card_game/Card.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="think_java_chapter13_card_game.Card"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="think_java_chapter13_card_game"/>
+</launchConfiguration>
