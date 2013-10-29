@@ -1,0 +1,22 @@
+<!--If you want to program with Javascript, remember to follow your logic!-->
+
+<!--The first form-->
+<form>
+<div><input type="text" id = 'input_randomnumber1' readonly="readonly" /> friends like this news.</div>
+</form>
+
+<!--The second form-->
+<form>
+<div><input type="text" id = 'input_randomnumber2' readonly="readonly" /> friends dislike this news.</div>
+</form>
+
+
+<!--The random number function-->
+<script type="text/javascript">
+function getRandomNumber() {
+	return Math.round(Math.random()*999+1);}
+var randomNumber1 = getRandomNumber();
+var randomNumber2 = getRandomNumber();
+document.getElementById('input_randomnumber1').value = randomNumber1 ;
+document.getElementById('input_randomnumber2').value = randomNumber2 ;
+</script>
