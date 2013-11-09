@@ -1,0 +1,10 @@
+c=seq(0,1,0.01)
+onemc=1-c
+logOneMC=log(1-c)
+TOneMC=-(c+c^2/2+c^3/3)
+plot(onemc,logOneMC)
+points(onemc,TOneMC,col="red")
+logC=log(c)
+TC=-(1-c+(1-c)^2/2+(1-c)^3/3)
+plot(c, logC)
+points(c, TC, col="red")
