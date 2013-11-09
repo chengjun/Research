@@ -2,6 +2,9 @@
 # data: CRAN051001a.txt seamap105_mod.csv auckland_mapgen.dat
 # state.sat.data_mod.txt high.RData auck_el1.RData auck_gshhs.RData
 # auck_el2.RData 70042108.tif
+
+setwd("D:/github/Research/R Tutorials/Spatial analysis/spatialbook/ch1/")
+
 ###################################################
 ### code chunk number 8: cm.Rnw:193-194
 ###################################################
