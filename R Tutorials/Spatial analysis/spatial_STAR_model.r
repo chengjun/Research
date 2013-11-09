@@ -1,4 +1,4 @@
-#¡¡£Ópatial  Smooth Transition AutoRegressive¡¡(STAR) modeling
+#????patial  Smooth Transition AutoRegressive??(STAR) modeling
 # chengjun
 # 2013 Aug 20
 
@@ -7,7 +7,7 @@ s = read.csv("d:/github/Research/visualization/Spatial econometric model/atlanta
 
 ######################################################################################
 # A Spatial Econometric STAR Model #
-# with an Application to U.S. County Economic Growth, 1969¨C2003 #
+# with an Application to U.S. County Economic Growth, 1969?C2003 #
 # (c) rjgmflorax, vopede #
 # Dept. of Agricultural Economics, Purdue University #
 # rflorax@purdue.edu, vpede@purdue.edu #
@@ -28,7 +28,7 @@ library(maptools)
 # uscnt <- readShapePoly("d:/github/Research/visualization/Spatial econometric model/atlanta_hom/rpci.shp",IDvar="ID")
 #----import weights matrix and calculate eigenvalues
 # weightgal <- read.gal("d:/github/Research/visualization/Spatial econometric model/atlanta_hom/atl_hom.GAL",region.id=uscnt$ID)
-#---------Data source£ºhttp://lambert.nico.free.fr/tp/data/others/atlanta_hom/---------------------------------------------------#
+#---------Data source??http://lambert.nico.free.fr/tp/data/others/atlanta_hom/---------------------------------------------------#
 
 # NAME	county name
 # STATE_NAME	state name
@@ -52,7 +52,7 @@ library(maptools)
 # RDAC85	resource deprivation/affluence composite variable, 1985
 # RDAC90	resource deprivation/affluence composite variable, 1990
 
-uscnt <- readShapePoly("d:/github/Research/visualization/Spatial econometric model/atlanta_hom/atl_hom.shp", IDvar = "FIPSNO")
+uscnt <- readShapePoly("d:/github/Research/R Tutorials/spatial analysis/Spatial econometric model/atlanta_hom/atl_hom.shp", IDvar = "FIPSNO")
 weightgal <- read.gal("d:/github/Research/visualization/Spatial econometric model/atlanta_hom/atl_hom.GAL", region.id=uscnt$FIPSNO)
 
 plot(uscnt, border="blue", axes=TRUE, las=1)
@@ -75,7 +75,7 @@ wy <- lag.listw(ws,y)
 n <- length(x)
 I <- diag(n)
 
-#¡¡write.table(data.frame(x, y, wx), "d:/github/Research/visualization/Spatial econometric model/atlanta_hom/nlsdata.csv", 
+#??write.table(data.frame(x, y, wx), "d:/github/Research/visualization/Spatial econometric model/atlanta_hom/nlsdata.csv", 
 #		row.names = F, col.names =F, sep = ",") 
 
 
